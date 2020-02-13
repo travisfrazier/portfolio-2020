@@ -1,0 +1,52 @@
+html,
+body {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  scroll-snap-type: y mandatory;
+  //overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Kalam', cursive;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.section-heading {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 0rem;
+  font-size: 6rem;
+  color: #ffffff;
+  text-align: left;
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-weight: 300;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
