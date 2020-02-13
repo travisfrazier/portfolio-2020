@@ -16,7 +16,7 @@ sections:
 - type: document
   path: data/contact.json
   label: Contact Section
-upload_dir: src/assets/img
+upload_dir: src/assets/images
 public_path: assets/img
 front_matter_path: ''
 use_front_matter_path: false
