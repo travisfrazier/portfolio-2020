@@ -17,4 +17,4 @@ build:
   preview_docker_image: node:10
   mount_path: "/srv"
   working_dir: "/srv/src/"
-  instant_preview_command: gridsome develop
+  instant_preview_command: npm start
