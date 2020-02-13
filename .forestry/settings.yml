@@ -3,7 +3,19 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: document
+  path: data/intro.json
+  label: Intro Section
+- type: document
+  path: data/about.json
+  label: About Section
+- type: document
+  path: data.projects.json
+  label: Projects Section
+- type: document
+  path: data/contact.json
+  label: Contact Section
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
