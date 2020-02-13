@@ -1,0 +1,16 @@
+---
+label: About Section
+hide_body: true
+fields:
+- name: section_title
+  type: text
+  config:
+    required: false
+  label: Section Title
+- name: profile_image
+  type: file
+  config:
+    maxSize: 250
+  label: Profile Image
+pages:
+- data/about.json

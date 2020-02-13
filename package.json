@@ -9,6 +9,7 @@
   "dependencies": {
     "fibers": "^4.0.2",
     "gridsome": "^0.7.0",
+    "gridsome-source-sanity": "^1.0.4",
     "sass": "^1.25.0"
   },
   "devDependencies": {

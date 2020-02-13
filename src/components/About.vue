@@ -44,11 +44,11 @@
 <script>
 export default {
   name: 'About',
-  // data() {
-  //   return {
-  //     settings: require("../../data/about.json")
-  //   }
-  // },
+  data() {
+    return {
+      settings: require("../../data/about.json")
+    }
+  },
   props: {
     title: String
   }
