@@ -6,8 +6,8 @@
       </div>
       <div class="about-content">
         <img class="profile-img" :src="`${settings.profile_image}`" />
-        <div class="about-description" v-html="`${settings.bio}`">
-         
+        <div class="about-description">
+         <p v-html="`${settings.bio}`"></p>
           <a href="#contact">
             <button>Contact Me</button>
           </a>
