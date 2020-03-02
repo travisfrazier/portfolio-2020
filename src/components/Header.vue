@@ -32,9 +32,11 @@
         <p>
           Hello, My name is <strong class="name">Travis Frazier</strong> and I'm a
         </p>
-        <h1>
-          <strong>FRONT-END WEB DEVELOPER</strong>
-        </h1>
+        <div class="typewriter">
+          <h1>
+            FRONT-END WEB DEVELOPER
+          </h1>
+        </div>
         <p>creating modern and responsive web experiences.</p>
         <div class="social-links">
           <a href="https://www.instagram.com/travfrazier/">
@@ -69,12 +71,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  //letter-spacing: .15em; /* Adjust as needed */
+.typewriter {
+  z-index: 1;
+}
+
+.typewriter h1 {
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .25rem; 
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
@@ -91,6 +97,7 @@ h1 {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
 header {
   background-image: url('../assets/images/laptop.jpg');
   background-size: cover;
