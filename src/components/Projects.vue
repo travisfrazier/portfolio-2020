@@ -84,61 +84,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-down" 
-        class="project project-two"
-      >
-        <a href="https://themimosasnailbar.com" target="_blank">
-          <img src='../assets/images/projects/mimosas-new.png' />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Mimosas Nail Bar (work in progress)</h3>
-              <p>
-                Developed client website following design spec. Incorporates a
-                Headless CMS for content updates. Built with: SASS, HTML5,
-                Vanilla JavaScript, VueJS, and Jekyll.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div 
-        data-aos="fade-left" 
-        class="project project-two"
-      >
-        <a href="https://movie-sales.netlify.com/" target="_blank">
-          <img src='../assets/images/projects/sales.png' />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>React Graph</h3>
-              <p>
-                Designed and Developed movie sales mock app. Built
-                with: ReactJS and SASS. Incorporates the Recharts composable charting library.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div 
-        data-aos="fade-right" 
-        class="project project-two"
-      >
-        <a href="https://queensboro.com" target="_blank">
-          <img src='../assets/images/projects/queensboro.png' />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Queensboro Shirt Company</h3>
-              <p>
-                Designed and Developed aspects for Queensboro.com. Built with:
-                HTML5, CSS3, JavaScript, jQuery, and Bootstrap.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div 
         data-aos="fade-up" 
         class="project project-two"
       >
@@ -275,9 +220,9 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-  @media only screen and (max-width: 1100px) {
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
   }
   grid-gap: 1rem;
 }
