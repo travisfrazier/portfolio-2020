@@ -1,21 +1,8 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div class="social-links">
-        <a href="https://www.instagram.com/travfrazier/">
-          <i class="fa fa-instagram" />
-        </a>
-        <a href="https://www.facebook.com/travisfrazier7">
-           <i><font-awesome :icon="['fab', 'facebook']"/></i>
-        </a>
-        <a href="https://github.com/travisfrazier">
-          <i><font-awesome :icon="['fab', 'github']"/></i>
-        </a>
-        <a href="https://www.linkedin.com/in/travisf7/">
-          <i><font-awesome :icon="['fab', 'linkedin']"/></i>
-        </a>
-      </div>
-      <p>Copyright © Travis Frazier 2019.</p>
+      <SocialLinks />
+      <p>Copyright © Travis Frazier 2020.</p>
     </div>
   </footer>
 </template>
@@ -25,6 +12,9 @@
 export default {
   name: "Footer",
   props: {},
+  components: {
+    SocialLinks: () => import ("./shared/SocialLinks")
+  },
   methods: {}
 };
 </script>

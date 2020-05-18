@@ -38,20 +38,7 @@
           </h1>
         </div>
         <p>creating modern and responsive web experiences.</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/travfrazier/">
-            <i class="fa fa-instagram" />
-          </a>
-          <a href="https://www.facebook.com/travisfrazier7">
-            <i class="fa fa-facebook" />
-          </a>
-          <a href="https://github.com/travisfrazier">
-            <i class="fa fa-github" />
-          </a>
-          <a href="https://www.linkedin.com/in/travisf7/">
-            <i class="fa fa-linkedin" />
-          </a>
-        </div>
+        <SocialLinks />
         <a class="arrow-container">
           <i class="fa fa-angle-double-down arrow" />
         </a>
@@ -64,6 +51,9 @@
 export default {
   name: "Header",
   props: {
+  },
+  components: {
+    SocialLinks: () => import ("./shared/SocialLinks")
   },
   methods: {
   }
@@ -212,31 +202,6 @@ header {
       font-size: 1.25rem;
       text-align: center;
       width: 95%;
-    }
-  }
-  .social-links {
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    @media only screen and (max-width: 812px) and (min-width: 376px) {
-      margin-top: 0.25rem;
-    }
-    a {
-      display: inline-table;
-      text-align: center;
-      height: 35px;
-      width: 35px;
-      color: #fff;
-      border-radius: 50%;
-      border: 1px solid #3e50b4;
-      margin: 0 0.5rem;
-    }
-    i {
-      display: table-cell;
-      vertical-align: middle;
-      color: #3e50b4;
-      text-shadow: 2px 2px 10px black;
     }
   }
   .arrow-container {

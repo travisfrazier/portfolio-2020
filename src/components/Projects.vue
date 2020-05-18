@@ -1,12 +1,8 @@
 <template>
     <section id="projects" class="projects section">
     <div class="section-heading">
-      <h2>My Latest Projects</h2>
+      <h2>Latest Projects</h2>
     </div>
-    <p class="project-disclaimer">
-      *Projects below were built by me without the use of jQuery. Hover each for
-      a description. They are fully responsive with media queries.
-    </p>
     <div class="projects_container">
       <div 
         data-aos="fade-right" 
@@ -134,7 +130,6 @@
 .projects {
   background-color: #212121;
   padding-bottom: 3rem;
-  overflow: scroll;
 }
 
 a {
@@ -171,7 +166,7 @@ a {
     backface-visibility: hidden;
   }
   .project-info {
-    position: absolute;
+    //position: absolute;
     text-align: center;
     top: 25%;
     display: flex;
@@ -215,7 +210,6 @@ a {
 }
 
 .projects_container {
-  overflow: scroll;
   display: grid;
   padding-left: 1rem;
   padding-right: 1rem;

@@ -41,7 +41,7 @@
               class="site-btn transition-ease"
               data-wow-delay="0.2s"
             >
-              Send Messege
+              Send Message
             </button>
           </div>
           <div id="result" />

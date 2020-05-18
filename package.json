@@ -7,16 +7,17 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "fibers": "^4.0.2",
     "gridsome": "^0.7.0",
     "gridsome-source-sanity": "^1.0.4",
     "sass": "^1.25.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/vue-fontawesome": "^0.1.9",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"
   }
 }
