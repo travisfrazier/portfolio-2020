@@ -4,7 +4,7 @@
       <h2>Let's Chat</h2>
     </div>
     <p class="relocate">
-      I'm currently based in San Diego, CA and I'm available for full-time work.
+      Currently based in San Diego, California.
     </p>
     <div class="form-wrapper">
       <form method="POST" data-netlify="true">

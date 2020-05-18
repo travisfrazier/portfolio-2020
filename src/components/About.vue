@@ -70,14 +70,12 @@ export default {
 }
 
 .about-description {
-  p {
-    font-size: 1.25rem;
-    color: #ffffffbb;
-  }
+  color: #ffffff;
+  font-size: 1.25rem;
 }
 
 .profile-img {
-  width: 60vh;
+  width: 100%;
   border-radius: 15px;
 }
 </style>

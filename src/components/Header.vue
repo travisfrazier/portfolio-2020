@@ -2,12 +2,33 @@
     <header class="header section">
         <figure class="mobile-menu">
           <img
-            onClick={this.toggleMenu}
+            v-on:click="toggleMenu"
             class="button"
             src='../assets/images/menu.png'
           />
         </figure>
-        <nav>
+        <nav class="desktop-nav">
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="https://represent.io/travisfrazier" target="_blank">
+                Resumé
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav v-show="showMenu" class="mobile-nav">
           <ul>
             <li>
               <a href="#home">Home</a>
@@ -34,7 +55,7 @@
         </p>
         <div class="typewriter">
           <h1>
-            FRONT-END WEB DEVELOPER
+            FRONT-END DEVELOPER
           </h1>
         </div>
         <p>creating modern and responsive web experiences.</p>
@@ -52,10 +73,19 @@ export default {
   name: "Header",
   props: {
   },
+  data() {
+    return {
+      showMenu: false
+    }
+  },
   components: {
     SocialLinks: () => import ("./shared/SocialLinks")
   },
   methods: {
+    toggleMenu() {
+      console.log('hey');
+      this.showMenu = !this.showMenu;
+    }
   }
 };
 </script>
@@ -106,7 +136,6 @@ header {
     justify-content: flex-end;
     z-index: 999;
     @media only screen and (max-width: 768px) {
-      display: none;
       justify-content: center;
       background-color: transparent;
       padding-top: 1.25rem;
@@ -145,6 +174,12 @@ header {
           }
         }
       }
+    }
+  }
+  //Desktop Nav 
+  .desktop-nav {
+    @media only screen and (max-width: 768px) {
+      display: none;
     }
   }
   //Mobile Nav
@@ -188,7 +223,7 @@ header {
     @media only screen and (max-width: 812px) {
       //font-size: 2.4rem;
       font-size: 6vw;
-      width: 95%;
+      //width: 95%;
     }
   }
   p {
@@ -199,9 +234,9 @@ header {
       margin: 0.25rem;
     }
     @media only screen and (max-width: 600px) {
-      font-size: 1.25rem;
+      font-size: 1rem;
       text-align: center;
-      width: 95%;
+      //width: 95%;
     }
   }
   .arrow-container {
