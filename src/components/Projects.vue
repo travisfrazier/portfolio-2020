@@ -65,14 +65,13 @@
         data-aos="fade-right" 
         class="project project-two"
       >
-        <a href="https://reactlistapp.netlify.com" target="_blank">
-          <img src='../assets/images/projects/list.png' />
+        <a href="https://just-get-wet.com" target="_blank">
+          <img src='../assets/images/projects/just-get-wet.png' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>React.js List App</h3>
+              <h3>Just-Get-Wet Shopify Site</h3>
               <p>
-                Designed and Developed a single page to-do app. Built with:
-                React.js and SASS.
+                Shopify site for local freedving community. Work includes: design changes, custom theme development, and UX.
               </p>
               <span>View Site</span>
             </div>
