@@ -7,7 +7,7 @@
       Currently based in San Diego, California.
     </p>
     <div class="form-wrapper">
-      <form method="POST" data-netlify="true">
+      <form name="contact" method="POST" data-netlify="true">
         <div>
           <div class="input-container">
             <input
