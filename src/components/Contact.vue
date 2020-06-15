@@ -7,12 +7,19 @@
       Currently based in San Diego, California.
     </p>
     <div class="form-wrapper">
-      <form name="contact" method="POST" data-netlify="true">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        v-on:submit.prevent="handleSubmit"
+        action="/success/"
+      >
         <div>
           <div class="input-container">
             <input
               type="text"
-              name="name"
+              name="form-name"
               id="name"
               required
               placeholder="Name*"
@@ -21,7 +28,7 @@
           <div class="input-container">
             <input
               type="email"
-              name="email"
+              name="form-email"
               id="email"
               required
               placeholder="Email*"
@@ -29,10 +36,10 @@
           </div>
           <div class="input-container">
             <textarea
-              id="massage"
-              name="massage"
+              id="messege"
+              name="form-messege"
               required
-              placeholder="Message*"
+              placeholder="Messege*"
             />
           </div>
           <div class="button-wrapper">
@@ -57,9 +64,35 @@ import Footer from '~/components/Footer.vue';
 
 export default {
   name: 'Contact',
+  data() {
+    return {
+      formData: {},
+    };
+  },
   components: {
-    Footer
-  }
+    Footer,
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+        .then(() => alert('Success! That worked :)'))
+        .catch((error) => alert(error));
+    },
+  },
 };
 </script>
 
@@ -136,6 +169,9 @@ form {
     color: white;
     font-size: 1.25rem;
     margin-top: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 </style>
