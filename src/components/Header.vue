@@ -1,92 +1,91 @@
 <template>
-    <header class="header section">
-        <figure class="mobile-menu">
-          <img
-            v-on:click="toggleMenu"
-            class="button"
-            src='../assets/images/menu.png'
-          />
-        </figure>
-        <nav class="desktop-nav">
-          <ul>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="https://represent.io/travisfrazier" target="_blank">
-                Resumé
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav v-show="showMenu" class="mobile-nav">
-          <ul>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="https://represent.io/travisfrazier" target="_blank">
-                Resumé
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="layer" />
-        <p>
-          Hello, My name is <strong class="name">Travis Frazier</strong> and I'm a
-        </p>
-        <div class="typewriter">
-          <h1>
-            FRONT-END DEVELOPER
-          </h1>
-        </div>
-        <p>creating modern and responsive web experiences.</p>
-        <SocialLinks />
-        <a class="arrow-container">
-          <i class="fa fa-angle-double-down arrow" />
-        </a>
-      </header>
+  <header class="header section">
+    <SwitchButton />
+    <figure class="mobile-menu">
+      <img
+        v-on:click="toggleMenu"
+        class="button"
+        src="../assets/images/menu.png"
+      />
+    </figure>
+    <nav class="desktop-nav">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="https://represent.io/travisfrazier" target="_blank">
+            Resumé
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav v-show="showMenu" class="mobile-nav">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="https://represent.io/travisfrazier" target="_blank">
+            Resumé
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="layer" />
+    <p>
+      Hello, My name is <strong class="name">Travis Frazier</strong> and I'm a
+    </p>
+    <div class="typewriter">
+      <h1>
+        FRONT-END DEVELOPER
+      </h1>
+    </div>
+    <p>creating modern and responsive web experiences.</p>
+    <SocialLinks />
+    <a class="arrow-container">
+      <i class="fa fa-angle-double-down arrow" />
+    </a>
+  </header>
 </template>
-
-
 
 <script>
 export default {
-  name: "Header",
-  props: {
-  },
+  name: 'Header',
+  props: {},
   data() {
     return {
-      showMenu: false
-    }
+      showMenu: false,
+    };
   },
   components: {
-    SocialLinks: () => import ("./shared/SocialLinks")
+    SocialLinks: () => import('./shared/SocialLinks'),
+    SwitchButton: () => import('./shared/SwitchButton')
   },
   methods: {
     toggleMenu() {
       console.log('hey');
       this.showMenu = !this.showMenu;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -96,26 +95,33 @@ export default {
 }
 
 .typewriter h1 {
-  overflow: hidden; 
-  border-right: .15em solid orange; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .25rem; 
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.25rem;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
 header {
@@ -176,7 +182,7 @@ header {
       }
     }
   }
-  //Desktop Nav 
+  //Desktop Nav
   .desktop-nav {
     @media only screen and (max-width: 768px) {
       display: none;
