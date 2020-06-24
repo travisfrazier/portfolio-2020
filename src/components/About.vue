@@ -16,19 +16,17 @@
   </section>
 </template>
 
-
-
 <script>
 export default {
   name: 'About',
   data() {
     return {
-      settings: require("../../data/about.json")
-    }
+      settings: require('../../data/about.json'),
+    };
   },
   props: {
-    title: String
-  }
+    title: String,
+  },
 };
 </script>
 
@@ -77,5 +75,18 @@ export default {
 .profile-img {
   width: 100%;
   border-radius: 15px;
+}
+
+//Light Mode
+.light-mode {
+  .about-me {
+    background: #ffffff;
+  }
+  button {
+    color: rgb(32, 32, 32);
+  }
+  .about-description {
+    color: rgb(32, 32, 32);
+  }
 }
 </style>

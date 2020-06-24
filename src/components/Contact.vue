@@ -174,4 +174,23 @@ form {
     }
   }
 }
+
+//Light mode styles
+.light-mode {
+  #contact {
+    background: #ffffff;
+  }
+  .relocate {
+    color: rgb(32, 32, 32);
+  }
+  input,
+  textarea {
+    color: rgb(32, 32, 32);
+  }
+  .section-heading {
+    h2 {
+      color: rgb(32, 32, 32);
+    }
+  }
+}
 </style>

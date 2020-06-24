@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { ToggleButton } from 'vue-js-toggle-button'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import '~/assets/index.scss'
@@ -15,6 +16,7 @@ library.add(faGithub, faTwitter, faFacebook, faInstagram, faLinkedin)
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
+  Vue.component('ToggleButton', ToggleButton)
   Vue.component('Layout', DefaultLayout)
   Vue.component('font-awesome', FontAwesomeIcon)
   head.link.push({

@@ -7,15 +7,14 @@
   </footer>
 </template>
 
-
 <script>
 export default {
-  name: "Footer",
+  name: 'Footer',
   props: {},
   components: {
-    SocialLinks: () => import ("./shared/SocialLinks")
+    SocialLinks: () => import('./shared/SocialLinks'),
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -49,6 +48,16 @@ export default {
       display: table-cell;
       vertical-align: middle;
       color: #3e50b4;
+    }
+  }
+}
+
+//Light mode styles
+.light-mode {
+  .footer {
+    background: #e7e7e7;
+    p {
+      color: rgb(32, 32, 32);
     }
   }
 }

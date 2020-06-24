@@ -1,15 +1,12 @@
 <template>
-    <section id="projects" class="projects section">
+  <section id="projects" class="projects section">
     <div class="section-heading">
       <h2>Latest Projects</h2>
     </div>
     <div class="projects_container">
-      <div 
-        data-aos="fade-right" 
-        class="project project-two"
-      >
+      <div data-aos="fade-right" class="project project-two">
         <a href="https://emanatesummit.com" target="_blank">
-          <img src='../assets/images/projects/emanate.png'/>
+          <img src="../assets/images/projects/emanate.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Emanate Summit</h3>
@@ -22,15 +19,12 @@
           </div>
         </a>
       </div>
-      <div 
-        data-aos="fade-up" 
-        class="project project-two"
-      >
+      <div data-aos="fade-up" class="project project-two">
         <a
           href="https://travisfrazier.github.io/flashcards-vue/"
           target="_blank"
         >
-          <img src='../assets/images/projects/flash.png' />
+          <img src="../assets/images/projects/flash.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vue.js Flash Card App</h3>
@@ -43,12 +37,9 @@
           </div>
         </a>
       </div>
-      <div 
-        data-aos="fade-left" 
-        class="project project-two"
-      >
+      <div data-aos="fade-left" class="project project-two">
         <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
-          <img src='../assets/images/projects/weather.png' />
+          <img src="../assets/images/projects/weather.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vanilla JS Weather App</h3>
@@ -61,29 +52,24 @@
           </div>
         </a>
       </div>
-      <div 
-        data-aos="fade-right" 
-        class="project project-two"
-      >
+      <div data-aos="fade-right" class="project project-two">
         <a href="https://just-get-wet.com" target="_blank">
-          <img src='../assets/images/projects/just-get-wet.png' />
+          <img src="../assets/images/projects/just-get-wet.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Just-Get-Wet Shopify Site</h3>
               <p>
-                Shopify site for local freedving community. Work includes: design changes, custom theme development, and UX.
+                Shopify site for local freedving community. Work includes:
+                design changes, custom theme development, and UX.
               </p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        data-aos="fade-up" 
-        class="project project-two"
-      >
+      <div data-aos="fade-up" class="project project-two">
         <a href="https://travisfrazier.github.io/vue-drum-pad/" target="_blank">
-          <img src='../assets/images/projects/mpc-kit.png' />
+          <img src="../assets/images/projects/mpc-kit.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vue.js Drum Pad</h3>
@@ -96,12 +82,9 @@
           </div>
         </a>
       </div>
-      <div 
-        data-aos="fade-left" 
-        class="project project-two"
-      >
+      <div data-aos="fade-left" class="project project-two">
         <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
-          <img src='../assets/images/projects/guess.png' />
+          <img src="../assets/images/projects/guess.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vanilla JS Match Game</h3>
@@ -119,10 +102,9 @@
 </template>
 
 <script>
-    export default {
-      name: 'Project'
-        
-    }
+export default {
+  name: 'Project',
+};
 </script>
 
 <style lang="scss" scoped>
@@ -218,5 +200,16 @@ a {
     grid-template-columns: 1fr;
   }
   grid-gap: 1rem;
+}
+//Light Mode Styles
+.light-mode {
+  .projects {
+    background-color: #e7e7e7;
+  }
+  .section-heading {
+    h2 {
+      color: rgb(32, 32, 32);
+    }
+  }
 }
 </style>

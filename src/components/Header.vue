@@ -1,6 +1,5 @@
 <template>
   <header class="header section">
-    <SwitchButton />
     <figure class="mobile-menu">
       <img
         v-on:click="toggleMenu"
@@ -9,6 +8,13 @@
       />
     </figure>
     <nav class="desktop-nav">
+      <toggle-button
+        color="#82C7EB"
+        @change="onChangeEventHandler"
+        :labels="{ checked: 'Light Mode', unchecked: 'Dark Mode' }"
+        :width="100"
+        :height="30"
+      />
       <ul>
         <li>
           <a href="#home">Home</a>
@@ -74,16 +80,19 @@ export default {
   data() {
     return {
       showMenu: false,
+      lightMode: false,
     };
   },
   components: {
     SocialLinks: () => import('./shared/SocialLinks'),
-    SwitchButton: () => import('./shared/SwitchButton')
   },
   methods: {
     toggleMenu() {
       console.log('hey');
       this.showMenu = !this.showMenu;
+    },
+    onChangeEventHandler() {
+      this.$emit('toggleMode');
     },
   },
 };
@@ -139,8 +148,10 @@ header {
     top: 0rem;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     z-index: 999;
+    align-items: center;
+    max-width: 95%;
     @media only screen and (max-width: 768px) {
       justify-content: center;
       background-color: transparent;
@@ -150,7 +161,6 @@ header {
     ul {
       list-style-type: none;
       width: 25rem;
-      padding-right: 3rem;
       z-index: 3;
       display: flex;
       justify-content: space-between;
@@ -258,6 +268,31 @@ header {
     font-size: 2rem;
     @media only screen and (max-width: 767px) and (min-width: 415px) {
       bottom: 0.75rem;
+    }
+  }
+}
+
+//Light Mode
+.light-mode {
+  h1,
+  p {
+    color: rgb(32, 32, 32);
+  }
+  header {
+    background-image: url('../assets/images/light-mode.jpg');
+  }
+  .layer {
+    background-color: #ffffff7a;
+  }
+  ul {
+    a {
+      color: rgb(32, 32, 32);
+      &:visited {
+        color: rgb(32, 32, 32);
+      }
+      &:hover {
+        color: rgb(32, 32, 32);
+      }
     }
   }
 }
