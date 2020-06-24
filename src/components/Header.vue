@@ -205,7 +205,6 @@ header {
       display: none;
     }
   }
-
   .vue-js-switch {
     z-index: 999;
   }
