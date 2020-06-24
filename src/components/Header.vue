@@ -1,12 +1,19 @@
 <template>
   <header class="header section">
-    <figure class="mobile-menu">
-      <img
-        v-on:click="toggleMenu"
-        class="button"
-        src="../assets/images/menu.png"
+    <div class="mobile-menu-container">
+      <toggle-button
+        color="#82C7EB"
+        @change="onChangeEventHandler"
+        :labels="{ checked: 'Light Mode', unchecked: 'Dark Mode' }"
+        :width="100"
+        :height="30"
       />
-    </figure>
+      <div v-on:click="toggleMenu" class="mobile-menu">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
     <nav class="desktop-nav">
       <toggle-button
         color="#82C7EB"
@@ -198,19 +205,57 @@ header {
       display: none;
     }
   }
+
+  .vue-js-switch {
+    z-index: 999;
+  }
   //Mobile Nav
-  .mobile-menu {
+  .mobile-nav {
+    max-width: 100%;
+    display: flex;
+    justify-content: start;
+    ul {
+      padding: 0;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .mobile-menu-container {
+    z-index: 1000;
+    display: none !important;
+    width: 90% !important;
     position: absolute;
     top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    @media only screen and (max-width: 768px) {
+      display: flex !important;
+    }
+  }
+  figure {
+    margin: 0;
+  }
+  .mobile-menu {
     z-index: 1000;
     display: none;
-    margin: auto;
     @media only screen and (max-width: 768px) {
       display: block;
     }
     img {
       width: 2rem;
       height: 2rem;
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #fff;
+      margin: 6px 0;
+      transition: 0.4s;
     }
   }
 
@@ -294,6 +339,16 @@ header {
         color: rgb(32, 32, 32);
       }
     }
+  }
+  nav {
+    @media only screen and (max-width: 768px) {
+      background-color: #e7e7e7;
+    }
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    background-color: rgb(32, 32, 32) !important;
   }
 }
 </style>

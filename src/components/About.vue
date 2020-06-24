@@ -82,6 +82,11 @@ export default {
   .about-me {
     background: #ffffff;
   }
+  .section-heading {
+    h2 {
+      color: rgb(32, 32, 32);
+    }
+  }
   button {
     color: rgb(32, 32, 32);
   }
