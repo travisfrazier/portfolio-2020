@@ -8,6 +8,9 @@
         :width="100"
         :height="30"
       /> -->
+      <Button class="mode-toggle-button" @click="onChangeEventHandler">{{
+        buttonText ? 'Light Mode' : 'Dark Mode'
+      }}</Button>
       <div v-on:click="toggleMenu" class="mobile-menu">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -15,13 +18,9 @@
       </div>
     </div>
     <nav class="desktop-nav">
-      <!-- <toggle-button
-        color="#82C7EB"
-        @change="onChangeEventHandler"
-        :labels="{ checked: 'Light Mode', unchecked: 'Dark Mode' }"
-        :width="100"
-        :height="30"
-      /> -->
+      <Button class="mode-toggle-button" @click="onChangeEventHandler">{{
+        buttonText ? 'Light Mode' : 'Dark Mode'
+      }}</Button>
       <ul>
         <li>
           <a href="#home">Home</a>
@@ -88,6 +87,7 @@ export default {
     return {
       showMenu: false,
       lightMode: false,
+      buttonText: true,
     };
   },
   components: {
@@ -100,12 +100,22 @@ export default {
     },
     onChangeEventHandler() {
       this.$emit('toggleMode');
+      this.buttonText = !this.buttonText;
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.mode-toggle-button {
+  width: 7rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff3f80;
+  color: white;
+  cursor: pointer;
+}
 .typewriter {
   z-index: 1;
 }
