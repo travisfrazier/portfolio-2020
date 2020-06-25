@@ -315,7 +315,6 @@ header {
     }
   }
 }
-
 //Light Mode
 .light-mode {
   h1,
