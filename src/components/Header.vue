@@ -212,7 +212,7 @@ header {
   .mobile-nav {
     max-width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     ul {
       padding: 0;
       width: 95%;
