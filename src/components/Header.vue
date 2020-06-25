@@ -1,13 +1,13 @@
 <template>
   <header class="header section">
     <div class="mobile-menu-container">
-      <toggle-button
+      <!-- <toggle-button
         color="#82C7EB"
         @change="onChangeEventHandler"
         :labels="{ checked: 'Light Mode', unchecked: 'Dark Mode' }"
         :width="100"
         :height="30"
-      />
+      /> -->
       <div v-on:click="toggleMenu" class="mobile-menu">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -15,13 +15,13 @@
       </div>
     </div>
     <nav class="desktop-nav">
-      <toggle-button
+      <!-- <toggle-button
         color="#82C7EB"
         @change="onChangeEventHandler"
         :labels="{ checked: 'Light Mode', unchecked: 'Dark Mode' }"
         :width="100"
         :height="30"
-      />
+      /> -->
       <ul>
         <li>
           <a href="#home">Home</a>
