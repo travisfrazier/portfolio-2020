@@ -108,7 +108,7 @@ export default {
 
 <style lang="scss" scoped>
 .mode-toggle-button {
-  width: 7rem;
+  width: 7.25rem;
   height: 2rem;
   border: none;
   border-radius: 5px;
