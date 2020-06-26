@@ -1,5 +1,5 @@
 <template>
-  <div ref="layout" class="layout">
+  <div ref="layout" class="layout light-mode">
     <Header v-on:toggleMode="updateMode" />
     <slot />
   </div>

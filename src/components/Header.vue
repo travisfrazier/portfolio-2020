@@ -8,7 +8,7 @@
         :width="100"
         :height="30"
       /> -->
-      <Button class="mode-toggle-button" @click="onChangeEventHandler">{{
+      <Button class="mode-toggle-button" v-bind:class="{ activeDark: isActive }" @click="onChangeEventHandler">{{
         buttonText ? 'Light Mode' : 'Dark Mode'
       }}</Button>
       <div v-on:click="toggleMenu" class="mobile-menu">
@@ -18,7 +18,7 @@
       </div>
     </div>
     <nav class="desktop-nav">
-      <Button class="mode-toggle-button" @click="onChangeEventHandler">{{
+      <Button class="mode-toggle-button" v-bind:class="{ activeDark: isActive }" @click="onChangeEventHandler">{{
         buttonText ? 'Light Mode' : 'Dark Mode'
       }}</Button>
       <ul>
@@ -86,8 +86,8 @@ export default {
   data() {
     return {
       showMenu: false,
-      lightMode: false,
-      buttonText: true,
+      buttonText: false,
+      isActive: false
     };
   },
   components: {
@@ -101,6 +101,7 @@ export default {
     onChangeEventHandler() {
       this.$emit('toggleMode');
       this.buttonText = !this.buttonText;
+      this.isActive = !this.isActive;
     },
   },
 };
@@ -112,9 +113,12 @@ export default {
   height: 2rem;
   border: none;
   border-radius: 5px;
-  background-color: #ff3f80;
-  color: white;
+  background-color: #000;
+  color: #ff3f80;
   cursor: pointer;
+}
+.activeDark {
+  background-color: #fff !important;
 }
 .typewriter {
   z-index: 1;
