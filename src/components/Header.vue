@@ -116,6 +116,8 @@ export default {
   background-color: #000;
   color: #ff3f80;
   cursor: pointer;
+  font-family: $font-secondary;
+  padding-top: .1rem;
 }
 .activeDark {
   background-color: #fff !important;

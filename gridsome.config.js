@@ -6,5 +6,12 @@
 
 module.exports = {
   siteName: 'Portfolio Site',
-  plugins: []
+  plugins: [
+    {
+      use: 'gridsome-plugin-sass-resources-loader',
+      options: {
+        resources: '~/assets/index.scss'
+      }
+    }
+  ]
 }
