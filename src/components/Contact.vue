@@ -90,7 +90,7 @@ export default {
 }
 
 #contact {
-  background: #424242;
+  background: $color-two;
 }
 
 .form-wrapper {
@@ -106,6 +106,9 @@ form {
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
   label {
     display: block;
     margin-bottom: 8px;
@@ -129,7 +132,7 @@ form {
     background: none;
     border: 1.25px solid black;
     border-radius: 10px;
-    color: #ffffff;
+    color: $color-white;
     width: 50%;
     @media only screen and (max-width: 600px) {
       width: 90%;
@@ -153,7 +156,7 @@ form {
     height: 3.25rem;
     border: none;
     border-radius: 5px;
-    background-color: #ff3f80;
+    background-color: $color-one;
     color: white;
     font-size: 1.25rem;
     margin-top: 1rem;
@@ -166,7 +169,7 @@ form {
 //Light mode styles
 .light-mode {
   #contact {
-    background: #ffffff;
+    background: $color-white;
   }
   .relocate {
     color: rgb(32, 32, 32);

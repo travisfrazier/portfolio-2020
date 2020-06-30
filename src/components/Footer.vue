@@ -41,13 +41,13 @@ export default {
       width: 35px;
       color: #fff;
       border-radius: 50%;
-      border: 1px solid #3e50b4;
+      border: 1px solid $color-links;
       margin: 0 0.5rem;
     }
     i {
       display: table-cell;
       vertical-align: middle;
-      color: #3e50b4;
+      color: $color-links;
     }
   }
 }

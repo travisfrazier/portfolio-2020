@@ -167,7 +167,7 @@ a {
       line-height: 1.5;
     }
     span {
-      color: #ffffff;
+      color: $color-white;
     }
   }
 }

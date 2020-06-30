@@ -114,7 +114,7 @@ export default {
   border: none;
   border-radius: 5px;
   background-color: #000;
-  color: #ff3f80;
+  color: $color-one;
   cursor: pointer;
   font-family: $font-secondary;
   padding-top: .1rem;
@@ -208,7 +208,7 @@ header {
             color: #f5f5f5;
           }
           &:hover {
-            color: #ff3f80;
+            color: $color-one;
             //border-bottom: 1px solid #118aaf;
           }
         }

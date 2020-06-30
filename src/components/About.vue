@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 .about-me {
   padding-bottom: 2rem;
-  background: #424242;
+  background: $color-two;
   .about-me-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -61,14 +61,14 @@ export default {
     height: 3.25rem;
     border: none;
     border-radius: 5px;
-    background-color: #ff3f80;
+    background-color: $color-one;
     color: white;
     font-size: 1.25rem;
   }
 }
 
 .about-description {
-  color: #ffffff;
+  color: $color-white;
   font-size: 1.25rem;
 }
 
@@ -80,7 +80,7 @@ export default {
 //Light Mode
 .light-mode {
   .about-me {
-    background: #ffffff;
+    background: $color-white;
   }
   .section-heading {
     h2 {
