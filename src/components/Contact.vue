@@ -7,53 +7,6 @@
       Currently based in San Diego, California.
     </p>
     <div class="form-wrapper">
-      <!-- <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        v-on:submit.prevent="handleSubmit"
-        action="/success/"
-      >
-        <div>
-          <div class="input-container">
-            <input
-              type="text"
-              name="form-name"
-              id="name"
-              required
-              placeholder="Name*"
-            />
-          </div>
-          <div class="input-container">
-            <input
-              type="email"
-              name="form-email"
-              id="email"
-              required
-              placeholder="Email*"
-            />
-          </div>
-          <div class="input-container">
-            <textarea
-              id="messege"
-              name="form-messege"
-              required
-              placeholder="Messege*"
-            />
-          </div>
-          <div class="button-wrapper">
-            <button
-              type="submit"
-              class="site-btn transition-ease"
-              data-wow-delay="0.2s"
-            >
-              Send Message
-            </button>
-          </div>
-          <div id="result" />
-        </div>
-      </form> -->
       <form
         name="contact"
         method="post"
@@ -68,21 +21,21 @@
         </p>
         <div class="sender-info">
           <div>
-            <label for="name" class="label">Your name</label>
+            <label class="form-label" for="name">Name*</label>
             <input type="text" name="name" v-model="formData.name" />
           </div>
           <div>
-            <label for="email">Your email</label>
+            <label class="form-label" for="email">Email*</label>
             <input type="email" name="email" v-model="formData.email" />
           </div>
         </div>
 
         <div class="message-wrapper">
-          <label for="message">Message</label>
+          <label class="form-label" for="message">Message*</label>
           <textarea name="message" v-model="formData.message"></textarea>
         </div>
 
-        <button type="submit">Submit form</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
     <Footer />
@@ -132,8 +85,8 @@ export default {
   margin-bottom: 3rem;
   margin-right: auto;
   margin-left: auto;
-  width: 90%;
   color: #ffffffb9;
+  width: 90%;
 }
 
 #contact {
@@ -141,10 +94,9 @@ export default {
 }
 
 .form-wrapper {
-  //width: 55%;
-  //max-width: 42rem;
-  //margin: auto;
+  margin: auto;
   padding-bottom: 5rem;
+  width: 90%;
   @media only screen and (max-width: 600px) {
     width: 100%;
     margin: auto;
@@ -153,10 +105,12 @@ export default {
 form {
   width: 100%;
   overflow: hidden;
+  margin: 0 auto;
   label {
     display: block;
     margin-bottom: 8px;
     font-size: 1.25rem;
+    color: black;
   }
   fieldset {
     width: 100%;
@@ -166,7 +120,6 @@ form {
   input,
   textarea {
     background-color: #d4d4d4;
-    width: 90%;
     //display: inline;
     //border-radius: 5px;
     border: none;
@@ -177,6 +130,11 @@ form {
     border: 1.25px solid black;
     border-radius: 10px;
     color: #ffffff;
+    width: 50%;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+      margin: auto;
+    }
   }
   input {
     height: 3.25rem;
@@ -189,7 +147,6 @@ form {
   .button-wrapper {
     display: flex;
     margin: auto;
-    width: 90%;
   }
   button {
     width: 11rem;
