@@ -114,10 +114,10 @@ export default {
 }
 
 a {
-  color: black;
+  color: $color-black;
   overflow: hidden;
   &:visited {
-    color: black;
+    color: $color-black;
   }
 }
 

@@ -46,7 +46,7 @@ export default {
     display: table-cell;
     vertical-align: middle;
     color: $color-links;
-    text-shadow: 2px 2px 10px black;
+    text-shadow: 2px 2px 10px $color-black;
   }
 }
 </style>

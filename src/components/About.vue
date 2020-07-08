@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       settings: require('../../data/about.json'),
+      altImage: "`${settings.profile_image_two}`"
     };
   },
   props: {

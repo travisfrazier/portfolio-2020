@@ -113,7 +113,7 @@ form {
     display: block;
     margin-bottom: 8px;
     font-size: 1.25rem;
-    color: black;
+    color: $color-white;
   }
   fieldset {
     width: 100%;
@@ -160,6 +160,7 @@ form {
     color: white;
     font-size: 1.25rem;
     margin-top: 1rem;
+    font-family: $font-secondary;
     &:hover {
       cursor: pointer;
     }
@@ -172,15 +173,20 @@ form {
     background: $color-white;
   }
   .relocate {
-    color: rgb(32, 32, 32);
+    color: $color-black;
   }
   input,
   textarea {
-    color: rgb(32, 32, 32);
+    color: $color-black;
   }
   .section-heading {
     h2 {
-      color: rgb(32, 32, 32);
+      color: $color-black;
+    }
+  }
+  form {
+    label {
+      color: $color-black;
     }
   }
 }
