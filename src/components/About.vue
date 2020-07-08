@@ -5,7 +5,8 @@
         <h2>{{ settings.section_title }}</h2>
       </div>
       <div class="about-content">
-        <img class="profile-img" :src="`${settings.profile_image}`" />
+        <img v-if="!altImage" v-on:mouseenter="updateImage" class="profile-img" :src="`${settings.profile_image}`" />
+        <img v-else v-on:mouseleave="updateImage" class="profile-img" :src="`${settings.profile_image_two}`" />
         <div class="about-description" v-html="`${settings.bio}`">
           <a href="#contact">
             <button>Contact Me</button>
@@ -22,12 +23,18 @@ export default {
   data() {
     return {
       settings: require('../../data/about.json'),
-      altImage: "`${settings.profile_image_two}`"
+      altImage: false
     };
   },
   props: {
     title: String,
   },
+  methods: {
+    updateImage() {
+      console.log('hovered on image')
+      this.altImage = !this.altImage;
+    }
+  }
 };
 </script>
 
@@ -76,6 +83,7 @@ export default {
 .profile-img {
   width: 100%;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 //Light Mode
