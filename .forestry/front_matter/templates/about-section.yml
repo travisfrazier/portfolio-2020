@@ -10,8 +10,14 @@ fields:
 - name: profile_image
   type: file
   config:
-    maxSize: 250
+    maxSize: 64
   label: Profile Image
+- name: profile_image_two
+  type: file
+  config:
+    maxSize: 64
+  label: Profile Image Two
+  description: Used for the onhover alt image.
 - name: bio
   type: textarea
   default: ''
