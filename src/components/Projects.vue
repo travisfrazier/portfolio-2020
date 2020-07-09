@@ -104,6 +104,11 @@
 <script>
 export default {
   name: 'Project',
+  data() {
+    return {
+      settings: require('../../data/projects.json')
+    };
+  },
 };
 </script>
 
