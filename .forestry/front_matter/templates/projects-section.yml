@@ -7,3 +7,33 @@ fields:
   config:
     required: false
   label: Section Title
+- name: project_image_one
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image One
+- name: project_image_two
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Two
+- name: project_image_three
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Three
+- name: project_image_four
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Four
+- name: project_image_five
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Five
+- name: project_image_six
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Six
