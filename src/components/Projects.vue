@@ -6,7 +6,7 @@
     <div class="projects_container">
       <div data-aos="fade-right" class="project project-two">
         <a href="https://emanatesummit.com" target="_blank">
-          <img src="../assets/images/projects/emanate.png" />
+          <img :src="`${settings.project_image_one}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Emanate Summit</h3>
@@ -24,7 +24,7 @@
           href="https://travisfrazier.github.io/flashcards-vue/"
           target="_blank"
         >
-          <img src="../assets/images/projects/flash.png" />
+          <img :src="`${settings.project_image_two}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vue.js Flash Card App</h3>
@@ -39,7 +39,7 @@
       </div>
       <div data-aos="fade-left" class="project project-two">
         <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
-          <img src="../assets/images/projects/weather.png" />
+          <img :src="`${settings.project_image_three}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vanilla JS Weather App</h3>
@@ -54,7 +54,7 @@
       </div>
       <div data-aos="fade-right" class="project project-two">
         <a href="https://just-get-wet.com" target="_blank">
-          <img src="../assets/images/projects/just-get-wet.png" />
+          <img :src="`${settings.project_image_four}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Just-Get-Wet Shopify Site</h3>
@@ -69,7 +69,7 @@
       </div>
       <div data-aos="fade-up" class="project project-two">
         <a href="https://travisfrazier.github.io/vue-drum-pad/" target="_blank">
-          <img src="../assets/images/projects/mpc-kit.png" />
+          <img :src="`${settings.project_image_five}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vue.js Drum Pad</h3>
@@ -84,7 +84,7 @@
       </div>
       <div data-aos="fade-left" class="project project-two">
         <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
-          <img src="../assets/images/projects/guess.png" />
+          <img :src="`${settings.project_image_six}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vanilla JS Match Game</h3>
