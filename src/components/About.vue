@@ -5,8 +5,8 @@
         <h2>{{ settings.section_title }}</h2>
       </div>
       <div class="about-content">
-        <img v-if="!altImage" v-on:mouseenter="updateImage" class="profile-img" :src="`${settings.profile_image}`" />
-        <img v-else v-on:mouseleave="updateImage" class="profile-img" :src="`${settings.profile_image_two}`" />
+        <img v-if="!altImage" v-on:mouseenter="updateImage" v-on:touchstart="updateImage" class="profile-img" :src="`${settings.profile_image}`" />
+        <img v-else v-on:mouseout="updateImage" v-on:touchend="updateImage" class="profile-img" :src="`${settings.profile_image_two}`" />
         <div class="about-description" v-html="`${settings.bio}`">
           <a href="#contact">
             <button>Contact Me</button>
