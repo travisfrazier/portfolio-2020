@@ -7,30 +7,6 @@ fields:
   config:
     required: false
   label: Section Title
-<<<<<<< HEAD
-- name: profile_image
-  type: file
-  config:
-    maxSize: 64
-  label: Profile Image
-- name: profile_image_two
-  type: file
-  config:
-    maxSize: 64
-  label: Profile Image Two
-  description: Used for the onhover alt image.
-- name: bio
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Bio
-pages:
-- data/projects.json
-=======
 - name: project_image_one
   type: file
   config:
@@ -61,4 +37,3 @@ pages:
   config:
     maxSize: 64
   label: Project Image Six
->>>>>>> 1ca2471996859ce1e36fb751e1b41316ab9cc4a7
