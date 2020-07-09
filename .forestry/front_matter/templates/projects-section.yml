@@ -7,6 +7,7 @@ fields:
   config:
     required: false
   label: Section Title
+<<<<<<< HEAD
 - name: profile_image
   type: file
   config:
@@ -29,3 +30,35 @@ fields:
   label: Bio
 pages:
 - data/projects.json
+=======
+- name: project_image_one
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image One
+- name: project_image_two
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Two
+- name: project_image_three
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Three
+- name: project_image_four
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Four
+- name: project_image_five
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Five
+- name: project_image_six
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Six
+>>>>>>> 1ca2471996859ce1e36fb751e1b41316ab9cc4a7
