@@ -118,9 +118,15 @@ export default {
   cursor: pointer;
   font-family: $font-secondary;
   padding-top: .1rem;
+  &:hover {
+    color: $color-white;
+  }
 }
 .activeDark {
   background-color: #fff !important;
+  &:hover {
+    color: $color-black;
+  }
 }
 .typewriter {
   z-index: 1;
@@ -345,24 +351,24 @@ header {
   }
   ul {
     a {
-      color: rgb(32, 32, 32);
+      color: $color-black;
       &:visited {
-        color: rgb(32, 32, 32);
+        color: $color-black;
       }
       &:hover {
-        color: rgb(32, 32, 32);
+        color: $color-one;
       }
     }
   }
   nav {
     @media only screen and (max-width: 768px) {
-      background-color: #e7e7e7;
+      background-color: $color-three;
     }
   }
   .bar1,
   .bar2,
   .bar3 {
-    background-color: rgb(32, 32, 32) !important;
+    background-color: $color-black !important;
   }
 }
 </style>

@@ -55,7 +55,7 @@ export default {
 //Light mode styles
 .light-mode {
   .footer {
-    background: #e7e7e7;
+    background: $color-three;
     p {
       color: rgb(32, 32, 32);
     }

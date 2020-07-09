@@ -209,7 +209,7 @@ a {
 //Light Mode Styles
 .light-mode {
   .projects {
-    background-color: #e7e7e7;
+    background-color: $color-three;
   }
   .section-heading {
     h2 {

@@ -163,6 +163,7 @@ form {
     font-family: $font-secondary;
     &:hover {
       cursor: pointer;
+      color: $color-black;
     }
   }
 }
