@@ -11,7 +11,7 @@ sections:
   path: data/about.json
   label: About Section
 - type: document
-  path: data.projects.json
+  path: data/projects.json
   label: Projects Section
 - type: document
   path: data/contact.json
