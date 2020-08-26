@@ -97,6 +97,34 @@
           </div>
         </a>
       </div>
+      <div data-aos="fade-left" class="project project-two">
+        <a href="https://vue-movie-list.netlify.app/" target="_blank">
+          <img :src="`${settings.project_image_six}`" />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Vue JS Movie Watch List</h3>
+              <p>
+                Developed this movie watch list app with Nuxt.js. Tools used: VueJS, Api's, SASS, and more.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div data-aos="fade-left" class="project project-two">
+        <a href="https://miserable.media" target="_blank">
+          <img :src="`${settings.project_image_six}`" />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Miserable Media</h3>
+              <p>
+                Developed company website for Miserable Media. Site is build with Gridsome (customized a starter project) and linked to Forestry headless CMS.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -106,7 +134,7 @@ export default {
   name: 'Project',
   data() {
     return {
-      settings: require('../../data/projects.json')
+      settings: require('../../data/projects.json'),
     };
   },
 };
