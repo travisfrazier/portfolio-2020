@@ -37,5 +37,15 @@ fields:
   config:
     maxSize: 64
   label: Project Image Six
+- name: project_image_seven
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Seven
+- name: project_image_eight
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Eight
 pages:
 - data/projects.json
