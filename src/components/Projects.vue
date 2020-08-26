@@ -99,7 +99,7 @@
       </div>
       <div data-aos="fade-left" class="project project-two">
         <a href="https://vue-movie-list.netlify.app/" target="_blank">
-          <img :src="`${settings.project_image_six}`" />
+          <img :src="`${settings.project_image_seven}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vue JS Movie Watch List</h3>
@@ -113,7 +113,7 @@
       </div>
       <div data-aos="fade-left" class="project project-two">
         <a href="https://miserable.media" target="_blank">
-          <img :src="`${settings.project_image_six}`" />
+          <img :src="`${settings.project_image_eight}`" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Miserable Media</h3>
