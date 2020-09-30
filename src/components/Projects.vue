@@ -9,7 +9,7 @@
         v-for="item in projects"
         :key="item.node.id"
       >
-        <a :href="item.node.url" target="_blank">
+        <a target="_blank">
           <g-image :src="item.node.image" :alt="item.node.title" />
           <div class="project-inner">
             <div class="project-info">
