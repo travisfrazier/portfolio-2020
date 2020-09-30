@@ -33,4 +33,5 @@ fields:
     required: true
 pages:
 - projects/miserable-media.md
+- projects/vanilla-js-weather-app.md
 - projects/vue-js-movie-watch-list-spa.md
