@@ -32,6 +32,7 @@ fields:
   config:
     required: true
 pages:
+- projects/emmanate-summit.md
 - projects/miserable-media.md
 - projects/vanilla-js-weather-app.md
 - projects/vue-js-movie-watch-list-spa.md
