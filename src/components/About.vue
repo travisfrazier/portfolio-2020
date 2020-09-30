@@ -1,5 +1,5 @@
 <template>
-  <section class="about-me section" id="about">
+  <section data-aos="fade-in" data-aos-duration="3000" class="about-me section" id="about">
     <div class="about-me-content">
       <div class="section-heading">
         <h2>{{ settings.section_title }}</h2>

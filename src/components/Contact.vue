@@ -1,5 +1,5 @@
 <template>
-  <section class="section" id="contact">
+  <section data-aos="fade-in" data-aos-duration="3000" class="section" id="contact">
     <div class="section-heading">
       <h2>Let's Chat</h2>
     </div>
