@@ -33,3 +33,4 @@ fields:
     required: true
 pages:
 - projects/miserable-media.md
+- projects/vue-js-movie-watch-list-spa.md
