@@ -16,6 +16,10 @@ sections:
 - type: document
   path: data/contact.json
   label: Contact Section
+- type: directory
+  path: projects
+  label: Projects
+  create: document
 upload_dir: static/uploads
 public_path: uploads
 front_matter_path: ''

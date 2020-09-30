@@ -20,9 +20,11 @@ fields:
   description: Project description
   config:
     required: true
-- type: url
+- type: text
   name: url
   label: Project url
+  config:
+    required: true
 - type: text
   name: button
   label: Button text
