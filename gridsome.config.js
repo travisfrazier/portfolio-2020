@@ -12,6 +12,18 @@ module.exports = {
       options: {
         resources: '~/assets/index.scss'
       }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "projects/**/*.md",
+        typeName: "ProjectPost",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+        }
+      }
     }
   ]
 }

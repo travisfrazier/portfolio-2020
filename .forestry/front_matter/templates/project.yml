@@ -1,0 +1,33 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: file
+  name: image
+  label: Image
+  description: Project image
+  config:
+    maxSize: 64
+- type: text
+  name: title
+  label: Title
+  description: Project title
+  config:
+    required: true
+- type: textarea
+  name: desc
+  label: Description
+  description: Project description
+  config:
+    required: true
+- type: url
+  name: url
+  label: Project url
+- type: text
+  name: button
+  label: Button text
+  description: Project button text
+  config:
+    required: true
+pages:
+

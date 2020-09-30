@@ -4,123 +4,20 @@
       <h2>Latest Projects</h2>
     </div>
     <div class="projects_container">
-      <div data-aos="fade-right" class="project project-two">
-        <a href="https://emanatesummit.com" target="_blank">
-          <img :src="`${settings.project_image_one}`" />
+      <div
+        class="project project-two"
+        v-for="item in projects"
+        :key="item.node.id"
+      >
+        <a :href="item.node.url" target="_blank">
+          <g-image :src="item.node.image" :alt="item.node.title" />
           <div class="project-inner">
             <div class="project-info">
-              <h3>Emanate Summit</h3>
+              <h3>{{ item.node.title }}</h3>
               <p>
-                Designed and Developed freelance client website (work in
-                progress). Built with: ReactJS and SASS.
+                {{ item.node.desc }}
               </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div data-aos="fade-up" class="project project-two">
-        <a
-          href="https://travisfrazier.github.io/flashcards-vue/"
-          target="_blank"
-        >
-          <img :src="`${settings.project_image_two}`" />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Vue.js Flash Card App</h3>
-              <p>
-                Developed single page flash card app. Built with: Vue.js, HTML5,
-                and SASS.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div data-aos="fade-left" class="project project-two">
-        <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
-          <img :src="`${settings.project_image_three}`" />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Vanilla JS Weather App</h3>
-              <p>
-                Designed and Developed a single page weather app. Built with:
-                Vanilla JavaScript, Fetch API, and SASS.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div data-aos="fade-right" class="project project-two">
-        <a href="https://just-get-wet.com" target="_blank">
-          <img :src="`${settings.project_image_four}`" />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Just-Get-Wet Shopify Site</h3>
-              <p>
-                Shopify site for local freedving community. Work includes:
-                design changes, custom theme development, and UX.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div data-aos="fade-up" class="project project-two">
-        <a href="https://travisfrazier.github.io/vue-drum-pad/" target="_blank">
-          <img :src="`${settings.project_image_five}`" />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Vue.js Drum Pad</h3>
-              <p>
-                Designed and Developed a single page drum pad application. Built
-                with: Vue.js CDN, SASS, and HTML5.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div data-aos="fade-left" class="project project-two">
-        <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
-          <img :src="`${settings.project_image_six}`" />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Vanilla JS Match Game</h3>
-              <p>
-                Developed this match game application. Built with: Vanilla
-                JavaScript, Bootstrap 4, and custom CSS.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div data-aos="fade-left" class="project project-two">
-        <a href="https://vue-movie-list.netlify.app/" target="_blank">
-          <img :src="`${settings.project_image_seven}`" />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Vue JS Movie Watch List</h3>
-              <p>
-                Developed this movie watch list app with Nuxt.js. Tools used: VueJS, Api's, SASS, and more.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div data-aos="fade-left" class="project project-two">
-        <a href="https://miserable.media" target="_blank">
-          <img :src="`${settings.project_image_eight}`" />
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Miserable Media</h3>
-              <p>
-                Developed company website for Miserable Media. Site is build with Gridsome (customized a starter project) and linked to Forestry headless CMS.
-              </p>
-              <span>View Site</span>
+              <span>{{ item.node.button }}</span>
             </div>
           </div>
         </a>
@@ -131,11 +28,11 @@
 
 <script>
 export default {
-  name: 'Project',
-  data() {
-    return {
-      settings: require('../../data/projects.json'),
-    };
+  props: {
+    projects: {
+      type: Array,
+      required: true,
+    },
   },
 };
 </script>
