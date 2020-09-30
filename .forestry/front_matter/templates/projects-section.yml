@@ -7,26 +7,45 @@ fields:
   config:
     required: false
   label: Section Title
-type: field_group_list
-name: projects
-label: Projects
-description: The list of projects
-hidden: false
-fields:
-- type: text
-  name: title
-  label: "Profect Title"
-  config:
-    required: true
-- type: textarea
-  name: desc
-  label: "Project Description"
-    config:
-    required: true
-- type: file
-  name: image
-  label: "Project Image"
+- name: project_image_one
+  type: file
   config:
     maxSize: 64
+  label: Project Image One
+- name: project_image_two
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Two
+- name: project_image_three
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Three
+- name: project_image_four
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Four
+- name: project_image_five
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Five
+- name: project_image_six
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Six
+- name: project_image_seven
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Seven
+- name: project_image_eight
+  type: file
+  config:
+    maxSize: 64
+  label: Project Image Eight
 pages:
 - data/projects.json

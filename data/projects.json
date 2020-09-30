@@ -1,8 +1,11 @@
 {
   "section_title": "Latest Projects",
-  "projects": {
-    "title": "",
-    "desc": "",
-    "image": ""
-  }
+  "project_image_one": "uploads/emanate.png",
+  "project_image_two": "uploads/flash.png",
+  "project_image_three": "uploads/weather.png",
+  "project_image_four": "uploads/just-get-wet.jpg",
+  "project_image_five": "uploads/mpc-kit.png",
+  "project_image_six": "uploads/guess.png",
+  "project_image_seven": "uploads/screen-shot-2020-08-26-at-1-25-21-pm.png",
+  "project_image_eight": "uploads/screen-shot-2020-08-26-at-1-15-47-pm.png"
 }
