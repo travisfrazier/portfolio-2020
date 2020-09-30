@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@gridsome/remark-prismjs": "^0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.3",
     "fibers": "^4.0.2",
     "gridsome": "^0.7.0",
     "gridsome-plugin-sass-resources-loader": "0.0.3",

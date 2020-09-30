@@ -90,7 +90,7 @@ a {
     }
     p {
       color: #ffffffce;
-      width: 90%;
+      width: 85%;
       margin-right: auto;
       margin-left: auto;
       font-weight: 500;
