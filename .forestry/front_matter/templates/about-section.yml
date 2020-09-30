@@ -1,0 +1,31 @@
+---
+label: About Section
+hide_body: true
+fields:
+- name: section_title
+  type: text
+  config:
+    required: false
+  label: Section Title
+- name: profile_image
+  type: file
+  config:
+    maxSize: 64
+  label: Profile Image
+- name: profile_image_two
+  type: file
+  config:
+    maxSize: 64
+  label: Profile Image Two
+  description: Used for the onhover alt image.
+- name: bio
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Bio
+pages:
+- data/about.json

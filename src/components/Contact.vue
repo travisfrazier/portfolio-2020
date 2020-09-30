@@ -4,48 +4,38 @@
       <h2>Let's Chat</h2>
     </div>
     <p class="relocate">
-      I'm currently based in San Diego, CA and I'm available for full-time work.
+      Currently based in San Diego, California.
     </p>
     <div class="form-wrapper">
-      <form method="POST" data-netlify="true">
-        <div>
-          <div class="input-container">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="Name*"
-            />
+      <form
+        name="contact"
+        method="post"
+        v-on:submit.prevent="handleSubmit"
+        action="/success/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label> Don’t fill this out: <input name="bot-field" /> </label>
+        </p>
+        <div class="sender-info">
+          <div>
+            <label class="form-label" for="name">Name*</label>
+            <input type="text" name="name" v-model="formData.name" />
           </div>
-          <div class="input-container">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              placeholder="Email*"
-            />
+          <div>
+            <label class="form-label" for="email">Email*</label>
+            <input type="email" name="email" v-model="formData.email" />
           </div>
-          <div class="input-container">
-            <textarea
-              id="massage"
-              name="massage"
-              required
-              placeholder="Message*"
-            />
-          </div>
-          <div class="button-wrapper">
-            <button
-              type="submit"
-              class="site-btn transition-ease"
-              data-wow-delay="0.2s"
-            >
-              Send Messege
-            </button>
-          </div>
-          <div id="result" />
         </div>
+
+        <div class="message-wrapper">
+          <label class="form-label" for="message">Message*</label>
+          <textarea name="message" v-model="formData.message"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
     <Footer />
@@ -57,9 +47,35 @@ import Footer from '~/components/Footer.vue';
 
 export default {
   name: 'Contact',
+  data() {
+    return {
+      formData: {},
+    };
+  },
   components: {
-    Footer
-  }
+    Footer,
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+        .then(() => alert('Success! That worked :)'))
+        .catch((error) => alert(error));
+    },
+  },
 };
 </script>
 
@@ -69,30 +85,35 @@ export default {
   margin-bottom: 3rem;
   margin-right: auto;
   margin-left: auto;
-  width: 90%;
   color: #ffffffb9;
+  width: 90%;
 }
 
 #contact {
-  background: #424242;
+  background: $color-two;
 }
 
 .form-wrapper {
-  //width: 55%;
-  //max-width: 42rem;
-  //margin: auto;
+  margin: auto;
   padding-bottom: 5rem;
+  width: 90%;
   @media only screen and (max-width: 600px) {
-    width: 90%;
+    width: 100%;
+    margin: auto;
   }
 }
 form {
   width: 100%;
   overflow: hidden;
+  margin: 0 auto;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
   label {
     display: block;
     margin-bottom: 8px;
     font-size: 1.25rem;
+    color: $color-white;
   }
   fieldset {
     width: 100%;
@@ -102,7 +123,6 @@ form {
   input,
   textarea {
     background-color: #d4d4d4;
-    width: 90%;
     //display: inline;
     //border-radius: 5px;
     border: none;
@@ -112,7 +132,12 @@ form {
     background: none;
     border: 1.25px solid black;
     border-radius: 10px;
-    color: #ffffff;
+    color: $color-white;
+    width: 50%;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+      margin: auto;
+    }
   }
   input {
     height: 3.25rem;
@@ -125,17 +150,45 @@ form {
   .button-wrapper {
     display: flex;
     margin: auto;
-    width: 90%;
   }
   button {
     width: 11rem;
     height: 3.25rem;
     border: none;
     border-radius: 5px;
-    background-color: #ff3f80;
+    background-color: $color-one;
     color: white;
     font-size: 1.25rem;
     margin-top: 1rem;
+    font-family: $font-secondary;
+    &:hover {
+      cursor: pointer;
+      color: $color-black;
+    }
+  }
+}
+
+//Light mode styles
+.light-mode {
+  #contact {
+    background: $color-white;
+  }
+  .relocate {
+    color: $color-black;
+  }
+  input,
+  textarea {
+    color: $color-black;
+  }
+  .section-heading {
+    h2 {
+      color: $color-black;
+    }
+  }
+  form {
+    label {
+      color: $color-black;
+    }
   }
 }
 </style>

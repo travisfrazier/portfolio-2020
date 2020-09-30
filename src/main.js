@@ -4,13 +4,13 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import '~/assets/index.scss'
 
 config.autoAddCss = false;
-library.add(faGithub, faTwitter)
+library.add(faGithub, faTwitter, faFacebook, faInstagram, faLinkedin)
 
 
 export default function (Vue, { router, head, isClient }) {

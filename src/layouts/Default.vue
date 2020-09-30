@@ -1,6 +1,6 @@
 <template>
-  <div class="layout">
-    <Header />
+  <div ref="layout" class="layout light-mode">
+    <Header v-on:toggleMode="updateMode" />
     <slot />
   </div>
 </template>
@@ -12,9 +12,13 @@ import Header from '~/components/Header.vue';
 export default {
   components: {
     Header
+  },
+  methods: {
+    updateMode() {
+      console.log('triggered');
+      this.$refs.layout.classList.toggle('light-mode');
+    }
   }
 };
 </script>
 
-
-<style></style>

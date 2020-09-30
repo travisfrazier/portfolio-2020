@@ -1,96 +1,167 @@
 <template>
-    <header class="header section">
-        <figure class="mobile-menu">
-          <img
-            onClick={this.toggleMenu}
-            class="button"
-            src='../assets/images/menu.png'
-          />
-        </figure>
-        <nav>
-          <ul>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="https://represent.io/travisfrazier" target="_blank">
-                Resumé
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="layer" />
-        <p>
-          Hello, My name is <strong class="name">Travis Frazier</strong> and I'm a
-        </p>
-        <h1>
-          <strong>FRONT-END WEB DEVELOPER</strong>
-        </h1>
-        <p>creating modern and responsive web experiences.</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/travfrazier/">
-            <i class="fa fa-instagram" />
+  <header class="header section">
+    <div class="mobile-menu-container">
+      <!-- <toggle-button
+        color="#82C7EB"
+        @change="onChangeEventHandler"
+        :labels="{ checked: 'Light Mode', unchecked: 'Dark Mode' }"
+        :width="100"
+        :height="30"
+      /> -->
+      <Button class="mode-toggle-button" v-bind:class="{ activeDark: isActive }" @click="onChangeEventHandler">{{
+        buttonText ? 'Light Mode' : 'Dark Mode'
+      }}</Button>
+      <div v-on:click="toggleMenu" class="mobile-menu">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+    <nav class="desktop-nav">
+      <Button class="mode-toggle-button" v-bind:class="{ activeDark: isActive }" @click="onChangeEventHandler">{{
+        buttonText ? 'Light Mode' : 'Dark Mode'
+      }}</Button>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="https://represent.io/travisfrazier" target="_blank">
+            Resumé
           </a>
-          <a href="https://www.facebook.com/travisfrazier7">
-            <i class="fa fa-facebook" />
+        </li>
+      </ul>
+    </nav>
+    <nav v-show="showMenu" class="mobile-nav">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="https://represent.io/travisfrazier" target="_blank">
+            Resumé
           </a>
-          <a href="https://github.com/travisfrazier">
-            <i class="fa fa-github" />
-          </a>
-          <a href="https://www.linkedin.com/in/travisf7/">
-            <i class="fa fa-linkedin" />
-          </a>
-        </div>
-        <a class="arrow-container">
-          <i class="fa fa-angle-double-down arrow" />
-        </a>
-      </header>
+        </li>
+      </ul>
+    </nav>
+    <div class="layer" />
+    <p>
+      Hello, My name is <strong class="name">Travis Frazier</strong> and I'm a
+    </p>
+    <div class="typewriter">
+      <h1>
+        FRONT-END DEVELOPER
+      </h1>
+    </div>
+    <p>creating modern and responsive web experiences.</p>
+    <SocialLinks />
+    <a class="arrow-container">
+      <i class="fa fa-angle-double-down arrow" />
+    </a>
+  </header>
 </template>
-
-
 
 <script>
 export default {
-  name: "Header",
-  props: {
+  name: 'Header',
+  props: {},
+  data() {
+    return {
+      showMenu: false,
+      buttonText: false,
+      isActive: false
+    };
+  },
+  components: {
+    SocialLinks: () => import('./shared/SocialLinks'),
   },
   methods: {
-  }
+    toggleMenu() {
+      console.log('hey');
+      this.showMenu = !this.showMenu;
+    },
+    onChangeEventHandler() {
+      this.$emit('toggleMode');
+      this.buttonText = !this.buttonText;
+      this.isActive = !this.isActive;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  //letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+.mode-toggle-button {
+  width: 7.25rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: $color-one;
+  cursor: pointer;
+  font-family: $font-secondary;
+  padding-top: .1rem;
+  &:hover {
+    color: $color-white;
+  }
+}
+.activeDark {
+  background-color: #fff !important;
+  &:hover {
+    color: $color-black;
+  }
+}
+.typewriter {
+  z-index: 1;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.25rem;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
+
 header {
   background-image: url('../assets/images/laptop.jpg');
   background-size: cover;
@@ -106,10 +177,11 @@ header {
     top: 0rem;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     z-index: 999;
+    align-items: center;
+    max-width: 95%;
     @media only screen and (max-width: 768px) {
-      display: none;
       justify-content: center;
       background-color: transparent;
       padding-top: 1.25rem;
@@ -118,7 +190,6 @@ header {
     ul {
       list-style-type: none;
       width: 25rem;
-      padding-right: 3rem;
       z-index: 3;
       display: flex;
       justify-content: space-between;
@@ -143,26 +214,69 @@ header {
             color: #f5f5f5;
           }
           &:hover {
-            color: #ff3f80;
+            color: $color-one;
             //border-bottom: 1px solid #118aaf;
           }
         }
       }
     }
   }
+  //Desktop Nav
+  .desktop-nav {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .vue-js-switch {
+    z-index: 999;
+  }
   //Mobile Nav
-  .mobile-menu {
+  .mobile-nav {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    ul {
+      padding: 0;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .mobile-menu-container {
+    z-index: 1000;
+    display: none !important;
+    width: 90% !important;
     position: absolute;
     top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    @media only screen and (max-width: 768px) {
+      display: flex !important;
+    }
+  }
+  figure {
+    margin: 0;
+  }
+  .mobile-menu {
     z-index: 1000;
     display: none;
-    margin: auto;
     @media only screen and (max-width: 768px) {
       display: block;
     }
     img {
       width: 2rem;
       height: 2rem;
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #fff;
+      margin: 6px 0;
+      transition: 0.4s;
     }
   }
 
@@ -191,7 +305,7 @@ header {
     @media only screen and (max-width: 812px) {
       //font-size: 2.4rem;
       font-size: 6vw;
-      width: 95%;
+      //width: 95%;
     }
   }
   p {
@@ -202,34 +316,9 @@ header {
       margin: 0.25rem;
     }
     @media only screen and (max-width: 600px) {
-      font-size: 1.25rem;
+      font-size: 1rem;
       text-align: center;
-      width: 95%;
-    }
-  }
-  .social-links {
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    @media only screen and (max-width: 812px) and (min-width: 376px) {
-      margin-top: 0.25rem;
-    }
-    a {
-      display: inline-table;
-      text-align: center;
-      height: 35px;
-      width: 35px;
-      color: #fff;
-      border-radius: 50%;
-      border: 1px solid #3e50b4;
-      margin: 0 0.5rem;
-    }
-    i {
-      display: table-cell;
-      vertical-align: middle;
-      color: #3e50b4;
-      text-shadow: 2px 2px 10px black;
+      //width: 95%;
     }
   }
   .arrow-container {
@@ -246,6 +335,40 @@ header {
     @media only screen and (max-width: 767px) and (min-width: 415px) {
       bottom: 0.75rem;
     }
+  }
+}
+//Light Mode
+.light-mode {
+  h1,
+  p {
+    color: rgb(32, 32, 32);
+  }
+  header {
+    background-image: url('../assets/images/light-mode.jpg');
+  }
+  .layer {
+    background-color: #ffffff7a;
+  }
+  ul {
+    a {
+      color: $color-black;
+      &:visited {
+        color: $color-black;
+      }
+      &:hover {
+        color: $color-one;
+      }
+    }
+  }
+  nav {
+    @media only screen and (max-width: 768px) {
+      background-color: $color-three;
+    }
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    background-color: $color-black !important;
   }
 }
 </style>

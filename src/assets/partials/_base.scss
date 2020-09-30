@@ -1,24 +1,19 @@
+
+
 html,
 body {
   box-sizing: border-box;
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
-  color: #ffffff;
-  scroll-snap-type: y mandatory;
-  //overflow-x: hidden;
+  font-family: $font-primary;
+  color: $color-white;
 }
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Kalam', cursive;
-}
-
-.section {
-  height: 100vh;
-  scroll-snap-align: start;
+  font-family: $font-secondary;
 }
 
 .section-heading {
@@ -30,7 +25,7 @@ h4 {
 h2 {
   margin-top: 0rem;
   font-size: 6rem;
-  color: #ffffff;
+  color: $color-white;
   text-align: left;
   padding-top: 4rem;
   margin-bottom: 2rem;
