@@ -32,4 +32,4 @@ fields:
   config:
     required: true
 pages:
-
+- projects/miserable-media.md
