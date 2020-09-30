@@ -5,25 +5,6 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Portfolio Site',
-  plugins: [
-    {
-      use: 'gridsome-plugin-sass-resources-loader',
-      options: {
-        resources: '~/assets/index.scss'
-      }
-    },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "projects/**/*.md",
-        typeName: "ProjectPost",
-        resolveAbsolutePaths: true,
-        remark: {
-          externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
-    }
-  ]
+  siteName: 'Gridsome',
+  plugins: []
 }

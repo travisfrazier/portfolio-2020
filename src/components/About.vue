@@ -5,9 +5,31 @@
         <h2>{{ settings.section_title }}</h2>
       </div>
       <div class="about-content">
-        <img v-if="!altImage" v-on:mouseenter="updateImage" v-on:touchstart="updateImage" class="profile-img" :src="`${settings.profile_image}`" />
-        <img v-else v-on:mouseout="updateImage" v-on:touchend="updateImage" class="profile-img" :src="`${settings.profile_image_two}`" />
-        <div class="about-description" v-html="`${settings.bio}`">
+        <img class="profile-img" :src="`${settings.profile_image}`" />
+        <div class="about-description">
+          <p>
+            I am <ins>Travis FRAZIER</ins>. Front-end Developer. Musician.
+            Traveler. Hardcore adventurer. Devoted husband. Pretend Marine
+            Biologist.
+          </p>
+          <p>
+            I am passionate about creating user interfaces for web and mobile.
+            My strengths include HTML5, SASS, and JavaScript. I also enjoy the
+            challenge of writing my own CSS without the use of Bootstrap and I
+            am very comfortable manipulating the DOM with vanilla JavaScript.
+          </p>
+          <p>
+            Continual education and being relevant on new trends are both very
+            important to me and currently I'm focusing on ReactJS. It's not
+            uncommon to find me coding through the weekends or on the road.
+            Check out my latest projects below or view more on my
+            <u>
+              <a href="https://github.com/travisfrazier" target="_blank">
+                GitHub.
+              </a> </u
+            >I am eager to apply my experience and skills to better your
+            company or project!
+          </p>
           <a href="#contact">
             <button>Contact Me</button>
           </a>
@@ -17,23 +39,18 @@
   </section>
 </template>
 
+
+
 <script>
 export default {
   name: 'About',
-  data() {
-    return {
-      settings: require('../../data/about.json'),
-      altImage: false
-    };
-  },
+  // data() {
+  //   return {
+  //     settings: require("../../data/about.json")
+  //   }
+  // },
   props: {
-    title: String,
-  },
-  methods: {
-    updateImage() {
-      console.log('hovered on image')
-      this.altImage = !this.altImage;
-    }
+    title: String
   }
 };
 </script>
@@ -41,7 +58,7 @@ export default {
 <style lang="scss" scoped>
 .about-me {
   padding-bottom: 2rem;
-  background: $color-two;
+  background: #424242;
   .about-me-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -69,38 +86,21 @@ export default {
     height: 3.25rem;
     border: none;
     border-radius: 5px;
-    background-color: $color-one;
+    background-color: #ff3f80;
     color: white;
     font-size: 1.25rem;
   }
 }
 
 .about-description {
-  color: $color-white;
-  font-size: 1.25rem;
+  p {
+    font-size: 1.25rem;
+    color: #ffffffbb;
+  }
 }
 
 .profile-img {
-  width: 100%;
+  width: 60vh;
   border-radius: 15px;
-  cursor: pointer;
-}
-
-//Light Mode
-.light-mode {
-  .about-me {
-    background: $color-white;
-  }
-  .section-heading {
-    h2 {
-      color: rgb(32, 32, 32);
-    }
-  }
-  button {
-    color: rgb(32, 32, 32);
-  }
-  .about-description {
-    color: rgb(32, 32, 32);
-  }
 }
 </style>

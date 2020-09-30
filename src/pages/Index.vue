@@ -1,44 +1,28 @@
 <template>
   <Layout>
     <About />
-    <Projects :projects="$page.projects.edges" />
+    <Projects />
     <Contact />
   </Layout>
 </template>
 
-<page-query>
-query Posts {
-	projects: allProjectPost {
-    edges {
-      node {
-        id
-        image
-        title
-        desc
-        url
-        button
-        path
-      }
-    }
-  }
-}
-</page-query>
-
 <script>
-import About from '~/components/About.vue';
-import Projects from '~/components/Projects.vue';
-import Contact from '~/components/Contact.vue';
+import About from '~/components/About.vue'
+import Projects from '~/components/Projects.vue'
+import Contact from '~/components/Contact.vue'
 
 export default {
   metaInfo: {
-    title: `Travis Frazier`,
+    title: 'Hello, world!'
   },
   components: {
     About,
     Projects,
-    Contact,
-  },
-};
+    Contact
+  }
+}
 </script>
 
-<style></style>
+<style>
+
+</style>
