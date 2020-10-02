@@ -57,7 +57,7 @@ export default {
     align-items: center;
     padding-bottom: 3rem;
     width: 90%;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 950px) {
       grid-template-columns: 1fr;
       grid-gap: 1rem;
       align-items: center;
@@ -77,7 +77,10 @@ export default {
 
 .about-description {
   color: $color-white;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 
 .profile-img {

@@ -1,5 +1,5 @@
 <template>
-  <section data-aos="fade-in" data-aos-duration="3000" class="section" id="contact">
+  <section data-aos="fade-in" data-aos-duration="2500" class="section" id="contact">
     <div class="section-heading">
       <h2>Let's Chat</h2>
     </div>
@@ -87,6 +87,12 @@ export default {
   margin-left: auto;
   color: #ffffffb9;
   width: 90%;
+}
+
+.section-heading {
+  h2 {
+    margin-bottom: 0px;
+  }
 }
 
 #contact {
