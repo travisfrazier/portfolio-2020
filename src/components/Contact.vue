@@ -1,5 +1,10 @@
 <template>
-  <section data-aos="fade-in" data-aos-duration="2500" class="section" id="contact">
+  <section
+    data-aos="fade-in"
+    data-aos-duration="2500"
+    class="section"
+    id="contact"
+  >
     <div class="section-heading">
       <h2>Let's Chat</h2>
     </div>
@@ -110,7 +115,6 @@ export default {
 }
 form {
   width: 100%;
-  overflow: hidden;
   margin: 0 auto;
   @media only screen and (max-width: 600px) {
     width: 90%;
@@ -166,10 +170,13 @@ form {
     color: white;
     font-size: 1.25rem;
     margin-top: 1rem;
+    opacity: .75;
     font-family: $font-secondary;
+    transition: opacity 1s, scale 1s;
+    cursor: pointer;
     &:hover {
-      cursor: pointer;
-      color: $color-black;
+      opacity: 1;
+      scale: 1.05;
     }
   }
 }

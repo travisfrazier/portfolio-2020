@@ -1,26 +1,29 @@
 <template>
   <header class="header section">
     <div class="mobile-menu-container">
-      <!-- <toggle-button
-        color="#82C7EB"
-        @change="onChangeEventHandler"
-        :labels="{ checked: 'Light Mode', unchecked: 'Dark Mode' }"
-        :width="100"
-        :height="30"
-      /> -->
-      <Button class="mode-toggle-button" v-bind:class="{ activeDark: isActive }" @click="onChangeEventHandler">{{
-        buttonText ? 'Light Mode' : 'Dark Mode'
-      }}</Button>
-      <div v-on:click="toggleMenu" class="mobile-menu">
+      <Button
+        class="mode-toggle-button"
+        v-bind:class="{ activeDark: isActive }"
+        @click="onChangeEventHandler"
+        >{{ buttonText ? 'Light Mode' : 'Dark Mode' }}</Button
+      >
+      <div
+        v-on:click="toggleMenu"
+        class="mobile-menu change"
+        v-bind:class="{ hamburger: hamburger }"
+      >
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
     </div>
     <nav class="desktop-nav">
-      <Button class="mode-toggle-button" v-bind:class="{ activeDark: isActive }" @click="onChangeEventHandler">{{
-        buttonText ? 'Light Mode' : 'Dark Mode'
-      }}</Button>
+      <Button
+        class="mode-toggle-button"
+        v-bind:class="{ activeDark: isActive }"
+        @click="onChangeEventHandler"
+        >{{ buttonText ? 'Light Mode' : 'Dark Mode' }}</Button
+      >
       <ul>
         <li>
           <a href="#home">Home</a>
@@ -41,7 +44,8 @@
         </li>
       </ul>
     </nav>
-    <nav v-show="showMenu" class="mobile-nav">
+    <nav v-bind:class="{ visible: isVisible }" class="mobile-nav">
+      <span v-on:click="toggleMenu" class="close-menu">X</span>
       <ul>
         <li>
           <a href="#home">Home</a>
@@ -87,7 +91,9 @@ export default {
     return {
       showMenu: false,
       buttonText: false,
-      isActive: false
+      isActive: false,
+      hamburger: false,
+      isVisible: false,
     };
   },
   components: {
@@ -95,8 +101,8 @@ export default {
   },
   methods: {
     toggleMenu() {
-      console.log('hey');
       this.showMenu = !this.showMenu;
+      this.isVisible = !this.isVisible;
     },
     onChangeEventHandler() {
       this.$emit('toggleMode');
@@ -114,18 +120,23 @@ export default {
   border: none;
   border-radius: 5px;
   background-color: #000;
+  opacity: 0.75;
   color: $color-one;
   cursor: pointer;
   font-family: $font-secondary;
-  padding-top: .1rem;
+  padding-top: 0.1rem;
+  transition: opacity 1s, scale 1s;
+  z-index: 997;
   &:hover {
-    color: $color-white;
+    opacity: 1;
+    scale: 1.05;
   }
 }
 .activeDark {
   background-color: #fff !important;
   &:hover {
-    color: $color-black;
+    opacity: 1;
+    scale: 1.05;
   }
 }
 .typewriter {
@@ -221,122 +232,156 @@ header {
       }
     }
   }
-  //Desktop Nav
-  .desktop-nav {
-    @media only screen and (max-width: 768px) {
-      display: none;
-    }
-  }
-  .vue-js-switch {
-    z-index: 999;
-  }
-  //Mobile Nav
-  .mobile-nav {
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    ul {
-      padding: 0;
-      width: 95%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-  .mobile-menu-container {
-    z-index: 1000;
-    display: none !important;
-    width: 90% !important;
-    position: absolute;
-    top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    @media only screen and (max-width: 768px) {
-      display: flex !important;
-    }
-  }
-  figure {
-    margin: 0;
-  }
-  .mobile-menu {
-    z-index: 1000;
+}
+//Desktop Nav
+.desktop-nav {
+  @media only screen and (max-width: 768px) {
     display: none;
-    @media only screen and (max-width: 768px) {
-      display: block;
-    }
-    img {
-      width: 2rem;
-      height: 2rem;
-    }
-    .bar1,
-    .bar2,
-    .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: #fff;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-  }
-
-  //Toggle menu
-  .block {
-    display: flex !important;
-  }
-  //end
-  .layer {
-    background-color: #000000ab;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  h1 {
-    z-index: 1;
-    font-weight: 400;
-    width: 100%;
-    text-align: center;
-    color: #f5f5f5;
-    font-size: 5vw;
-    margin: 0.25rem 0rem;
-    padding-top: 0rem;
-    @media only screen and (max-width: 812px) {
-      //font-size: 2.4rem;
-      font-size: 6vw;
-      //width: 95%;
-    }
-  }
-  p {
-    z-index: 1;
-    font-size: 1.75vw;
-    color: #f5f5f5;
-    @media only screen and (max-width: 812px) and (min-width: 415px) {
-      margin: 0.25rem;
-    }
-    @media only screen and (max-width: 600px) {
-      font-size: 1rem;
-      text-align: center;
-      //width: 95%;
-    }
-  }
-  .arrow-container {
-    display: flex;
-    justify-content: center;
-  }
-  .arrow {
-    color: #ffffffcb;
-    //width: 3rem;
-    z-index: 3;
-    position: absolute;
-    bottom: 2rem;
-    font-size: 2rem;
-    @media only screen and (max-width: 767px) and (min-width: 415px) {
-      bottom: 0.75rem;
-    }
   }
 }
+.vue-js-switch {
+  z-index: 999;
+}
+//Mobile Nav
+.mobile-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate3d(-100vw, 0, 0);
+  width: 100vw;
+  transition: transform 1s;
+  ul {
+    padding: 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.75rem;
+  padding: 1.25rem;
+  color: $color-one;
+  cursor: pointer;
+}
+.mobile-nav.visible {
+  transform: translate3d(0vw, 0, 0);
+  z-index: 999;
+}
+.mobile-menu-container {
+  //z-index: 1000;
+  display: none !important;
+  width: 90% !important;
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  @media only screen and (max-width: 768px) {
+    display: flex !important;
+  }
+}
+figure {
+  margin: 0;
+}
+.mobile-menu {
+  z-index: 998;
+  display: none;
+  @media only screen and (max-width: 768px) {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+  .hamburger {
+    color: red;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+//Toggle menu
+.block {
+  display: flex !important;
+}
+//end
+.layer {
+  background-color: #000000ab;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  z-index: 1;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 5vw;
+  margin: 0.25rem 0rem;
+  padding-top: 0rem;
+  @media only screen and (max-width: 812px) {
+    //font-size: 2.4rem;
+    font-size: 6vw;
+    //width: 95%;
+  }
+}
+p {
+  z-index: 1;
+  font-size: 1.75vw;
+  color: #f5f5f5;
+  @media only screen and (max-width: 812px) and (min-width: 415px) {
+    margin: 0.25rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 1rem;
+    text-align: center;
+    //width: 95%;
+  }
+}
+.arrow-container {
+  display: flex;
+  justify-content: center;
+}
+.arrow {
+  color: #ffffffcb;
+  //width: 3rem;
+  z-index: 3;
+  position: absolute;
+  bottom: 2rem;
+  font-size: 2rem;
+  @media only screen and (max-width: 767px) and (min-width: 415px) {
+    bottom: 0.75rem;
+  }
+}
+
 //Light Mode
 .light-mode {
   h1,
