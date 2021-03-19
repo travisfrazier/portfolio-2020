@@ -3,7 +3,7 @@
     <a data-aos="fade-in" href="https://github.com/travisfrazier">
       <i><font-awesome :icon="['fab', 'github']"/></i>
     </a>
-    <a data-aos="fade-in" data-aos-duration="1200" href="https://www.instagram.com/traviscoding/">
+    <a data-aos="fade-in" data-aos-duration="1200" href="https://www.instagram.com/travfrazier/">
       <i><font-awesome :icon="['fab', 'instagram']"/></i>
     </a>
     <a data-aos="fade-in" data-aos-duration="3000" href="https://www.twitter.com/traviscoding">
