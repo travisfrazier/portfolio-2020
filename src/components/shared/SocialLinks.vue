@@ -28,6 +28,7 @@ export default {
   z-index: 1;
   display: flex;
   width: 100%;
+  max-width: 100%;
   justify-content: center;
   @media only screen and (max-width: 812px) and (min-width: 376px) {
     margin-top: 0.25rem;
