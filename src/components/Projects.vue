@@ -5,8 +5,6 @@
     </div>
     <div class="projects_container">
       <div 
-        data-aos="fade-in"
-        data-aos-duration="3000"
         class="project project-two"
         v-for="item in projects"
         :key="item.node.id"

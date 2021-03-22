@@ -1,15 +1,15 @@
 <template>
   <div class="social-links">
-    <a data-aos="fade-in" href="https://github.com/travisfrazier">
+    <a href="https://github.com/travisfrazier">
       <i><font-awesome :icon="['fab', 'github']"/></i>
     </a>
-    <a data-aos="fade-in" data-aos-duration="1200" href="https://www.instagram.com/travfrazier/">
+    <a href="https://www.instagram.com/travfrazier/">
       <i><font-awesome :icon="['fab', 'instagram']"/></i>
     </a>
-    <a data-aos="fade-in" data-aos-duration="3000" href="https://www.twitter.com/traviscoding">
+    <a href="https://www.twitter.com/traviscoding">
       <i><font-awesome :icon="['fab', 'twitter']"/></i>
     </a>
-    <a data-aos="fade-in" data-aos-duration="4000" href="https://www.linkedin.com/in/traviscoding/">
+    <a href="https://www.linkedin.com/in/traviscoding/">
       <i><font-awesome :icon="['fab', 'linkedin']"/></i>
     </a>
   </div>

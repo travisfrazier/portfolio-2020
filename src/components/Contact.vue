@@ -1,7 +1,5 @@
 <template>
   <section
-    data-aos="fade-in"
-    data-aos-duration="2500"
     class="section"
     id="contact"
   >
