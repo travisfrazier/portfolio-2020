@@ -1,8 +1,9 @@
 ---
-image: uploads/screen-shot-2020-08-26-at-1-25-21-pm.png
-title: Vue JS Movie Watch List SPA
-desc: Single page application built with Nuxt.js (Vue Framework).
-url: https://vue-movie-list.netlify.app/
+image: uploads/just-get-wet.jpg
+title: Just Get Wet
+desc: 'Shopify site for local freediving community in San Diego. Work includes: design
+  changes, custom them development, and UX.'
+url: https://just-get-wet.com
 button: View Project
 
 ---
