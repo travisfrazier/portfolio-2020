@@ -15,7 +15,7 @@
           <i><font-awesome :icon="['fab', 'linkedin']"/></i>
         </a>
       </div>
-      <p>Copyright © Travis Frazier 2019.</p>
+      <p>Copyright © Travis Frazier 2022.</p>
     </div>
   </footer>
 </template>

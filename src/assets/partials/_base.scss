@@ -6,7 +6,6 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
-  scroll-snap-type: y mandatory;
   //overflow-x: hidden;
 }
 h1,
@@ -14,11 +13,6 @@ h2,
 h3,
 h4 {
   font-family: 'Kalam', cursive;
-}
-
-.section {
-  height: 100vh;
-  scroll-snap-align: start;
 }
 
 .section-heading {

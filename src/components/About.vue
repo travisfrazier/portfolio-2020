@@ -2,10 +2,10 @@
   <section class="about-me section" id="about">
     <div class="about-me-content">
       <div class="section-heading">
-        <h2>{{ settings.section_title }}</h2>
+        <h2>About Me</h2>
       </div>
       <div class="about-content">
-        <img class="profile-img" :src="`${settings.profile_image}`" />
+        <img class="profile-img" src="" />
         <div class="about-description">
           <p>
             I am <ins>Travis FRAZIER</ins>. Front-end Developer. Musician.
@@ -43,15 +43,7 @@
 
 <script>
 export default {
-  name: 'About',
-  // data() {
-  //   return {
-  //     settings: require("../../data/about.json")
-  //   }
-  // },
-  props: {
-    title: String
-  }
+  name: 'About'
 };
 </script>
 
