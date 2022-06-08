@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "fibers": "^4.0.2",
-    "gridsome": "^0.7.0",
+    "gridsome": "^0.7.23",
     "sass": "^1.51.0"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "sass-loader": "^10.1.1",
+    "sockjs": "^0.3.24",
     "style-resources-loader": "^1.5.0"
   }
 }
