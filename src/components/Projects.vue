@@ -5,24 +5,6 @@
     </div>
     <div class="projects_container">
       <div 
-        data-aos="fade-right" 
-        class="project project-two"
-      >
-        <a href="https://emanatesummit.com" target="_blank">
-          <img src='../assets/images/projects/emanate.png'/>
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Emanate Summit</h3>
-              <p>
-                Designed and Developed freelance client website (work in
-                progress). Built with: ReactJS and SASS.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div 
         data-aos="fade-up" 
         class="project project-two"
       >
@@ -47,14 +29,14 @@
         data-aos="fade-left" 
         class="project project-two"
       >
-        <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
-          <img src='../assets/images/projects/weather.png' />
+        <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
+          <img src='../assets/images/projects/guess.png' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>Vanilla JS Weather App</h3>
+              <h3>Vanilla JS Match Game</h3>
               <p>
-                Designed and Developed a single page weather app. Built with:
-                Vanilla JavaScript, Fetch API, and SASS.
+                Developed this match game application. Built with: Vanilla
+                JavaScript, Bootstrap 4, and custom CSS.
               </p>
               <span>View Site</span>
             </div>
@@ -65,14 +47,13 @@
         data-aos="fade-right" 
         class="project project-two"
       >
-        <a href="https://reactlistapp.netlify.com" target="_blank">
-          <img src='../assets/images/projects/list.png' />
+        <a href="https://data-intake-vue.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/data-intake.jpg' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>React.js List App</h3>
+              <h3>Vue Partner Intake App</h3>
               <p>
-                Designed and Developed a single page to-do app. Built with:
-                React.js and SASS.
+                Designed and Developed a single page data-intake Vue app. Built with Gridsome, SCSS, Axios, and Vue Formulate.
               </p>
               <span>View Site</span>
             </div>
@@ -87,7 +68,7 @@
           <img src='../assets/images/projects/mimosas-new.png' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>Mimosas Nail Bar (work in progress)</h3>
+              <h3>Mimosas Nail Bar</h3>
               <p>
                 Developed client website following design spec. Incorporates a
                 Headless CMS for content updates. Built with: SASS, HTML5,
@@ -102,14 +83,13 @@
         data-aos="fade-left" 
         class="project project-two"
       >
-        <a href="https://movie-sales.netlify.com/" target="_blank">
-          <img src='../assets/images/projects/sales.png' />
+        <a href="https://vue-movie-list.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/movie-app.png' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>React Graph</h3>
+              <h3>Nuxt (Vue) Movie List</h3>
               <p>
-                Designed and Developed movie sales mock app. Built
-                with: ReactJS and SASS. Incorporates the Recharts composable charting library.
+                Single page demo app built with Vue / NuxtJS.
               </p>
               <span>View Site</span>
             </div>
@@ -120,14 +100,13 @@
         data-aos="fade-right" 
         class="project project-two"
       >
-        <a href="https://queensboro.com" target="_blank">
-          <img src='../assets/images/projects/queensboro.png' />
+        <a href="https://yogafuzn.com" target="_blank">
+          <img src='../assets/images/projects/yogafuzn.jpg' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>Queensboro Shirt Company</h3>
+              <h3>YogaFuzn Studio</h3>
               <p>
-                Designed and Developed aspects for Queensboro.com. Built with:
-                HTML5, CSS3, JavaScript, jQuery, and Bootstrap.
+                Designed and built yogafuzn.com.
               </p>
               <span>View Site</span>
             </div>
@@ -156,14 +135,31 @@
         data-aos="fade-left" 
         class="project project-two"
       >
-        <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
-          <img src='../assets/images/projects/guess.png' />
+        <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
+          <img src='../assets/images/projects/weather.png' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>Vanilla JS Match Game</h3>
+              <h3>Vanilla JS Weather App</h3>
               <p>
-                Developed this match game application. Built with: Vanilla
-                JavaScript, Bootstrap 4, and custom CSS.
+                Designed and Developed a single page weather app. Built with:
+                Vanilla JavaScript, Fetch API, and SASS.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div 
+        data-aos="fade-right" 
+        class="project project-two"
+      >
+        <a href="https://snorkelhere.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/snorkel.png'/>
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Snorkel Here</h3>
+              <p>
+                Developing website / blog focused in the travel industry. Built with Grdsome (Vue) - also uses Tailwind CSS.
               </p>
               <span>View Site</span>
             </div>
@@ -219,6 +215,8 @@ a {
     opacity: 1;
     transition: 0.5s ease;
     backface-visibility: hidden;
+    object-fit: cover;
+    height: 400px;
   }
   .project-info {
     position: absolute;

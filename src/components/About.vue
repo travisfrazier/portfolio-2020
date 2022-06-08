@@ -5,7 +5,7 @@
         <h2>About Me</h2>
       </div>
       <div class="about-content">
-        <img class="profile-img" src="" />
+        <img class="profile-img" src="../assets/images/me.jpg" />
         <div class="about-description">
           <p>
             I am <ins>Travis FRAZIER</ins>. Front-end Developer. Musician.
@@ -92,7 +92,7 @@ export default {
 }
 
 .profile-img {
-  width: 60vh;
+  width: 100%;
   border-radius: 15px;
 }
 </style>
