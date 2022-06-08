@@ -216,7 +216,7 @@ a {
     transition: 0.5s ease;
     backface-visibility: hidden;
     object-fit: cover;
-    height: 400px;
+    height: 315px;
   }
   .project-info {
     position: absolute;
