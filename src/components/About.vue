@@ -5,7 +5,7 @@
         <h2>About Me</h2>
       </div>
       <div class="about-content">
-        <img class="profile-img" src="../assets/images/me.jpg" />
+        <img class="profile-img" src="../assets/images/me-two.jpg" />
         <div class="about-description">
           <p>
             I am <ins>Travis FRAZIER</ins>. Front-end Developer. Musician.
