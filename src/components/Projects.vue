@@ -9,16 +9,15 @@
         class="project project-two"
       >
         <a
-          href="https://travisfrazier.github.io/flashcards-vue/"
+          href="https://yogiroll.com"
           target="_blank"
         >
-          <img src='../assets/images/projects/flash.png' />
+          <img src='../assets/images/projects/yogiroll.png' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>Vue.js Flash Card App</h3>
+              <h3>YogiRoll Shopify Site</h3>
               <p>
-                Developed single page flash card app. Built with: Vue.js, HTML5,
-                and SASS.
+                Created an ecommerce site for YogiRoll. Shopify platform.
               </p>
               <span>View Site</span>
             </div>
@@ -47,13 +46,13 @@
         data-aos="fade-right" 
         class="project project-two"
       >
-        <a href="https://data-intake-vue.netlify.app/" target="_blank">
-          <img src='../assets/images/projects/data-intake.jpg' />
+        <a href="https://miserable-media.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/miserable-media.png' />
           <div class="project-inner">
             <div class="project-info">
-              <h3>Vue Partner Intake App</h3>
+              <h3>Miserable Media</h3>
               <p>
-                Designed and Developed a single page data-intake Vue app. Built with Gridsome, SCSS, Axios, and Vue Formulate.
+                Custom built basic website with headless CMS.
               </p>
               <span>View Site</span>
             </div>
@@ -106,7 +105,7 @@
             <div class="project-info">
               <h3>YogaFuzn Studio</h3>
               <p>
-                Designed and built yogafuzn.com.
+                Designed and built yogafuzn.com - SquareSpace platform.
               </p>
               <span>View Site</span>
             </div>
