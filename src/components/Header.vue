@@ -3,8 +3,8 @@
     <div class="mobile-menu-container">
       <div
         v-on:click="toggleMenu"
-        class="mobile-menu change"
-        v-bind:class="{ hamburger: hamburger }"
+        class="mobile-menu"
+        :class="{ change: isVisible }"
       >
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -33,7 +33,6 @@
       </ul>
     </nav>
     <nav v-bind:class="{ visible: isVisible }" class="mobile-nav">
-      <span v-on:click="toggleMenu" class="close-menu">X</span>
       <ul>
         <li>
           <a href="#home">Home</a>
@@ -59,9 +58,7 @@
       Hello, My name is <strong class="name">Travis Frazier</strong> and I'm a
     </p>
     <div class="typewriter">
-      <h1>
-        FRONT-END DEVELOPER
-      </h1>
+      <h1>FRONT-END DEVELOPER</h1>
     </div>
     <p>creating modern and responsive web experiences.</p>
     <SocialLinks />
@@ -73,19 +70,18 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   props: {},
   data() {
     return {
       showMenu: false,
       buttonText: false,
       isActive: false,
-      hamburger: false,
       isVisible: false,
     };
   },
   components: {
-    SocialLinks: () => import('./SocialLinks'),
+    SocialLinks: () => import("./SocialLinks"),
   },
   methods: {
     toggleMenu() {
@@ -93,7 +89,7 @@ export default {
       this.isVisible = !this.isVisible;
     },
     onChangeEventHandler() {
-      this.$emit('toggleMode');
+      this.$emit("toggleMode");
       this.buttonText = !this.buttonText;
       this.isActive = !this.isActive;
     },
@@ -158,7 +154,7 @@ export default {
   }
 }
 header {
-  background-image: url('../assets/images/laptop.jpg');
+  background-image: url("../assets/images/laptop.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -231,9 +227,10 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  transform: translate3d(-100vw, 0, 0);
+  transform: translate3d(0, -100vh, 0);
   width: 100vw;
-  transition: transform 1s;
+  transition: transform .5s;
+  max-width: 100%;
   ul {
     padding: 0;
     width: 95%;
@@ -251,18 +248,17 @@ header {
   cursor: pointer;
 }
 .mobile-nav.visible {
-  transform: translate3d(0vw, 0, 0);
+  transform: translate3d(0, 0, 0);
   z-index: 999;
 }
 .mobile-menu-container {
-  //z-index: 1000;
+  z-index: 1000;
   display: none !important;
-  width: 90% !important;
   position: absolute;
   top: 1rem;
+  right: 1rem;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
   @media only screen and (max-width: 768px) {
     display: flex !important;
@@ -291,18 +287,20 @@ figure {
   .hamburger {
     color: red;
   }
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  /* Fade out the second bar */
-  .change .bar2 {
-    opacity: 0;
-  }
-  /* Rotate last bar */
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+  &.change {
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    /* Fade out the second bar */
+    .bar2 {
+      opacity: 0;
+    }
+    /* Rotate last bar */
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
   }
 }
 //Toggle menu
@@ -368,7 +366,7 @@ p {
     color: rgb(32, 32, 32);
   }
   header {
-    background-image: url('../assets/images/light-mode.jpg');
+    background-image: url("../assets/images/light-mode.jpg");
   }
   .layer {
     background-color: #ffffff7a;
