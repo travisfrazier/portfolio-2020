@@ -239,7 +239,7 @@ header {
   }
 }
 .close-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   font-size: 1.75rem;
@@ -254,7 +254,7 @@ header {
 .mobile-menu-container {
   z-index: 1000;
   display: none !important;
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
   display: flex;
