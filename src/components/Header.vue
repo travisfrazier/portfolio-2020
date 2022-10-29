@@ -25,11 +25,6 @@
         <li>
           <a href="#contact">Contact</a>
         </li>
-        <li>
-          <a href="https://represent.io/travisfrazier" target="_blank">
-            Resumé
-          </a>
-        </li>
       </ul>
     </nav>
     <nav v-bind:class="{ visible: isVisible }" class="mobile-nav">
@@ -45,11 +40,6 @@
         </li>
         <li>
           <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="https://represent.io/travisfrazier" target="_blank">
-            Resumé
-          </a>
         </li>
       </ul>
     </nav>
