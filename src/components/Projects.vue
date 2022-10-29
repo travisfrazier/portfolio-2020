@@ -5,6 +5,23 @@
     </div>
     <div class="projects_container">
       <div 
+        data-aos="fade-right" 
+        class="project project-two"
+      >
+        <a href="https://space-tourism-vuejs.netlify.app//" target="_blank">
+          <img src='../assets/images/projects/space-tourism.png'/>
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Space Tourism Vue Site</h3>
+              <p>
+                Developed interactive Vue.js static site with Gridsome.js, all custom styles based on Figma design
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div 
         data-aos="fade-up" 
         class="project project-two"
       >
@@ -142,23 +159,6 @@
               <p>
                 Designed and Developed a single page weather app. Built with:
                 Vanilla JavaScript, Fetch API, and SASS.
-              </p>
-              <span>View Site</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div 
-        data-aos="fade-right" 
-        class="project project-two"
-      >
-        <a href="https://snorkelhere.netlify.app/" target="_blank">
-          <img src='../assets/images/projects/snorkel.png'/>
-          <div class="project-inner">
-            <div class="project-info">
-              <h3>Snorkel Here</h3>
-              <p>
-                Developing website / blog focused in the travel industry. Built with Grdsome (Vue) - also uses Tailwind CSS.
               </p>
               <span>View Site</span>
             </div>
