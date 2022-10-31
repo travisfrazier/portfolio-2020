@@ -3,7 +3,7 @@
     <a href="https://github.com/travisfrazier">
       <i><font-awesome :icon="['fab', 'github']"/></i>
     </a>
-    <a href="https://www.instagram.com/travfrazier.dev/">
+    <a href="https://www.instagram.com/travisfrazier.dev/">
       <i><font-awesome :icon="['fab', 'instagram']"/></i>
     </a>
     <a href="https://www.twitter.com/traviscoding">
