@@ -8,18 +8,17 @@
         <img class="profile-img" src="../assets/images/me.jpg" />
         <div class="about-description">
           <p>
-            I am <ins>Travis FRAZIER</ins>. Front-end Developer. Musician.
-            Traveler. Hardcore adventurer. Devoted husband. Pretend Marine
-            Biologist.
+            I am <ins>Travis Frazier</ins>. Front-end Developer. Musician.
+            Traveler. Hardcore adventurer. Devoted husband. Freediver.
           </p>
           <p>
             I am passionate about creating user interfaces for web and mobile.
-            I work with a variety of clients both big and small. I love helping 
-            my clients achieve their web goals by creating a well built online presense.
+            I worked with a variety of companies both big and small. I love helping 
+            my clients and team achieve their web goals by creating a well built online presense.
           </p>
           <p>
             Continual education and being relevant on new trends are both very
-            important to me and currently I'm focusing on VueJS. It's not
+            important to me and currently I'm focusing on Vue.JS. It's not
             uncommon to find me coding through the weekends or on the road.
             Check out my latest projects below or view more on my
             <u>
