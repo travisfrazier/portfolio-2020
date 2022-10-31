@@ -3,6 +3,14 @@
     <div class="section-heading">
       <h2>My Latest Projects</h2>
     </div>
+    <div class="project-toggles">
+      <button @click="showVanilla">Vanilla JS</button>
+      <button @click="showVue">Vue.js</button>
+      <button @click="showReact">React.js</button>
+      <button @click="showShopify">Shopify</button>
+      <button @click="showSquareSpace">SquareSpace</button>
+      <button @click="showAll">All</button>
+    </div>
     <div class="projects_container">
       <div 
         data-aos="fade-right" 
@@ -22,7 +30,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-up" 
         class="project project-two"
       >
         <a
@@ -42,7 +49,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-left" 
         class="project project-two"
       >
         <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
@@ -60,7 +66,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-right" 
         class="project project-two"
       >
         <a href="https://miserable-media.netlify.app/" target="_blank">
@@ -77,7 +82,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-down" 
         class="project project-two"
       >
         <a href="https://themimosasnailbar.com" target="_blank">
@@ -96,7 +100,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-left" 
         class="project project-two"
       >
         <a href="https://vue-movie-list.netlify.app/" target="_blank">
@@ -113,7 +116,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-right" 
         class="project project-two"
       >
         <a href="https://yogafuzn.com" target="_blank">
@@ -130,7 +132,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-up" 
         class="project project-two"
       >
         <a href="https://travisfrazier.github.io/vue-drum-pad/" target="_blank">
@@ -148,7 +149,6 @@
         </a>
       </div>
       <div 
-        data-aos="fade-left" 
         class="project project-two"
       >
         <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
@@ -171,12 +171,28 @@
 
 <script>
     export default {
-      name: 'Project'
+      name: 'Project',
+      data() {
+        return {
+          showVanilla: false,
+          showVue: false,
+          showReact: false,
+          showShopify: false,
+          showSquare: false,
+          showAll: true
+        }
+      }
         
     }
 </script>
 
 <style lang="scss" scoped>
+.project-toggles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
 .projects {
   background-color: #212121;
   padding-bottom: 3rem;

@@ -72,15 +72,6 @@ export default {
       justify-items: center;
     }
   }
-  button {
-    width: 11rem;
-    height: 3.25rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff3f80;
-    color: white;
-    font-size: 1.25rem;
-  }
 }
 
 .about-description {
