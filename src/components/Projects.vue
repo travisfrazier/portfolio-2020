@@ -1,5 +1,5 @@
 <template>
-    <section id="projects" class="projects section">
+  <section id="projects" class="projects section">
     <div class="section-heading">
       <h2>My Latest Projects</h2>
     </div>
@@ -13,50 +13,36 @@
       <button @click="showAll()">All</button>
     </div>
     <div class="projects_container">
-      <div 
-        v-if="all || vue"
-        data-aos="fade-right" 
-        class="project project-two"
-      >
+      <div v-if="all || vue" data-aos="fade-right" class="project project-two">
         <a href="https://space-tourism-vuejs.netlify.app//" target="_blank">
-          <img src='../assets/images/projects/space-tourism.png'/>
+          <img src="../assets/images/projects/space-tourism.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Space Tourism Vue Site</h3>
               <p>
-                Developed interactive Vue.js static site with Gridsome.js, all custom styles based on Figma design
+                Developed interactive Vue.js static site with Gridsome.js, all
+                custom styles based on Figma design
               </p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        v-if="this.all || this.shopify"
-        class="project project-two"
-      >
-        <a
-          href="https://yogiroll.com"
-          target="_blank"
-        >
-          <img src='../assets/images/projects/yogiroll.png' />
+      <div v-if="this.all || this.shopify" class="project project-two">
+        <a href="https://yogiroll.com" target="_blank">
+          <img src="../assets/images/projects/yogiroll.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>YogiRoll Shopify Site</h3>
-              <p>
-                Created an ecommerce site for YogiRoll. Shopify platform.
-              </p>
+              <p>Created an ecommerce site for YogiRoll. Shopify platform.</p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || vanilla"
-        class="project project-two"
-      >
+      <div v-if="all || vanilla" class="project project-two">
         <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
-          <img src='../assets/images/projects/guess.png' />
+          <img src="../assets/images/projects/guess.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vanilla JS Match Game</h3>
@@ -69,29 +55,21 @@
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || other"
-        class="project project-two"
-      >
+      <div v-if="all || other" class="project project-two">
         <a href="https://miserable-media.netlify.app/" target="_blank">
-          <img src='../assets/images/projects/miserable-media.png' />
+          <img src="../assets/images/projects/miserable-media.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Miserable Media</h3>
-              <p>
-                Custom built basic website with headless CMS.
-              </p>
+              <p>Custom built basic website with headless CMS.</p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || other"
-        class="project project-two"
-      >
+      <div v-if="all || other" class="project project-two">
         <a href="https://themimosasnailbar.com" target="_blank">
-          <img src='../assets/images/projects/mimosas-new.png' />
+          <img src="../assets/images/projects/mimosas-new.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Mimosas Nail Bar</h3>
@@ -105,46 +83,33 @@
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || vue"
-        class="project project-two"
-      >
+      <div v-if="all || vue" class="project project-two">
         <a href="https://vue-movie-list.netlify.app/" target="_blank">
-          <img src='../assets/images/projects/movie-app.png' />
+          <img src="../assets/images/projects/movie-app.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Nuxt (Vue) Movie List</h3>
-              <p>
-                Single page demo app built with Vue / NuxtJS.
-              </p>
+              <p>Single page demo app built with Vue / NuxtJS.</p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || squarespace"
-        class="project project-two"
-      >
+      <div v-if="all || squarespace" class="project project-two">
         <a href="https://yogafuzn.com" target="_blank">
-          <img src='../assets/images/projects/yogafuzn.jpg' />
+          <img src="../assets/images/projects/yogafuzn.jpg" />
           <div class="project-inner">
             <div class="project-info">
               <h3>YogaFuzn Studio</h3>
-              <p>
-                Designed and built yogafuzn.com - SquareSpace platform.
-              </p>
+              <p>Designed and built yogafuzn.com - SquareSpace platform.</p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || vue"
-        class="project project-two"
-      >
+      <div v-if="all || vue" class="project project-two">
         <a href="https://travisfrazier.github.io/vue-drum-pad/" target="_blank">
-          <img src='../assets/images/projects/mpc-kit.png' />
+          <img src="../assets/images/projects/mpc-kit.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vue.js Drum Pad</h3>
@@ -157,12 +122,9 @@
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || vanilla"
-        class="project project-two"
-      >
+      <div v-if="all || vanilla" class="project project-two">
         <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
-          <img src='../assets/images/projects/weather.png' />
+          <img src="../assets/images/projects/weather.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Vanilla JS Weather App</h3>
@@ -175,53 +137,44 @@
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || vue"
-        class="project project-two"
-      >
+      <div v-if="all || vue" class="project project-two">
         <a href="https://data-intake-vue.netlify.app/" target="_blank">
-          <img src='../assets/images/projects/data-intake.jpg' />
+          <img src="../assets/images/projects/data-intake.jpg" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Data Intake Wizard</h3>
               <p>
-                Designed and Developed a single page app for collecting data. Built with:
-                Vue and Vue Formulate. The image upload creates a Base64 string.
+                Designed and Developed a single page app for collecting data.
+                Built with: Vue and Vue Formulate. The image upload creates a
+                Base64 string.
               </p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || react"
-        class="project project-two"
-      >
+      <div v-if="all || react" class="project project-two">
         <a href="https://reactlistapp.netlify.app/" target="_blank">
-          <img src='../assets/images/projects/list.png' />
+          <img src="../assets/images/projects/list.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>React List App</h3>
-              <p>
-                Simple and clean app built with React using the Gatsby SSG.
-              </p>
+              <p>Simple and clean app built with React using the Gatsby SSG.</p>
               <span>View Site</span>
             </div>
           </div>
         </a>
       </div>
-      <div 
-        v-if="all || squarespace"
-        class="project project-two"
-      >
-        <a href="https://flounder-kumquat-w36z.squarespace.com/" target="_blank">
-          <img src='../assets/images/projects/jeremy.png' />
+      <div v-if="all || squarespace" class="project project-two">
+        <a
+          href="https://flounder-kumquat-w36z.squarespace.com/"
+          target="_blank"
+        >
+          <img src="../assets/images/projects/jeremy.png" />
           <div class="project-inner">
             <div class="project-info">
               <h3>Jeremy Caruthers</h3>
-              <p>
-                Squarespace portfolio site.
-              </p>
+              <p>Squarespace portfolio site.</p>
               <span>View Site</span>
             </div>
           </div>
@@ -232,81 +185,89 @@
 </template>
 
 <script>
-    export default {
-      name: 'Project',
-      data() {
-        return {
-          vanilla: false,
-          vue: false,
-          react: false,
-          shopify: false,
-          squarespace: false,
-          other: false,
-          all: true
-        }
-      },
-      methods: {
-        showVanilla() {
-          this.vanilla = true;
-          this.vue = false;
-          this.react = false;
-          this.shopify = false;
-          this.squarespace = false;
-          this.all = false;
-        },
-        showVue() {
-          this.vanilla = false;
-          this.vue = true;
-          this.react = false;
-          this.shopify = false;
-          this.squarespace = false;
-          this.all = false;
-        },
-        showReact() {
-          this.vanilla = false;
-          this.vue = false;
-          this.react = true;
-          this.shopify = false;
-          this.squarespace = false;
-          this.all = false;
-        },
-        showShopify() {
-          this.vanilla = false;
-          this.vue = false;
-          this.react = false;
-          this.shopify = true;
-          this.squarespace = false;
-          this.all = false;
-        },
-        showSquarespace() {
-          this.vanilla = false;
-          this.vue = false;
-          this.react = false;
-          this.shopify = false;
-          this.squarespace = true;
-          this.all = false;
-        },
-        showOther() {
-          this.vanilla = false;
-          this.vue = false;
-          this.react = false;
-          this.shopify = false;
-          this.squarespace = false;
-          this.other = true;
-          this.all = false;
-        },
-        showAll() {
-          this.vanilla = false;
-          this.vue = false;
-          this.react = false;
-          this.shopify = false;
-          this.squarespace = false;
-          this.other = false;
-          this.all = true;
-        }
-      }
-        
-    }
+export default {
+  name: "Project",
+  data() {
+    return {
+      vanilla: false,
+      vue: false,
+      react: false,
+      shopify: false,
+      squarespace: false,
+      other: false,
+      all: true,
+    };
+  },
+  methods: {
+    showVanilla() {
+      this.vanilla = true;
+      this.vue = false;
+      this.react = false;
+      this.shopify = false;
+      this.squarespace = false;
+      this.other = false;
+
+      this.all = false;
+    },
+    showVue() {
+      this.vanilla = false;
+      this.vue = true;
+      this.react = false;
+      this.shopify = false;
+      this.squarespace = false;
+      this.other = false;
+
+      this.all = false;
+    },
+    showReact() {
+      this.vanilla = false;
+      this.vue = false;
+      this.react = true;
+      this.shopify = false;
+      this.squarespace = false;
+      this.other = false;
+
+      this.all = false;
+    },
+    showShopify() {
+      this.vanilla = false;
+      this.vue = false;
+      this.react = false;
+      this.shopify = true;
+      this.squarespace = false;
+      this.other = false;
+
+      this.all = false;
+    },
+    showSquarespace() {
+      this.vanilla = false;
+      this.vue = false;
+      this.react = false;
+      this.shopify = false;
+      this.squarespace = true;
+      this.other = false;
+      this.all = false;
+    },
+    showOther() {
+      this.vanilla = false;
+      this.vue = false;
+      this.react = false;
+      this.shopify = false;
+      this.squarespace = false;
+      this.other = true;
+      this.all = false;
+    },
+    showAll() {
+      this.vanilla = false;
+      this.vue = false;
+      this.react = false;
+      this.shopify = false;
+      this.squarespace = false;
+      this.other = false;
+      this.all = true;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
