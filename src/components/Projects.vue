@@ -3,12 +3,22 @@
     <div class="section-heading">
       <h2>My Latest Projects</h2>
     </div>
+    <div class="project-toggles">
+      <button @click="showVanilla()">Vanilla JS</button>
+      <button @click="showVue()">Vue.js</button>
+      <button @click="showReact()">React.js</button>
+      <button @click="showShopify()">Shopify</button>
+      <button @click="showSquarespace()">SquareSpace</button>
+      <button @click="showOther()">Other</button>
+      <button @click="showAll()">All</button>
+    </div>
     <div class="projects_container">
       <div 
+        v-if="all || vue"
         data-aos="fade-right" 
         class="project project-two"
       >
-        <a href="https://space-tourism-vuejs.netlify.app" target="_blank">
+        <a href="https://space-tourism-vuejs.netlify.app//" target="_blank">
           <img src='../assets/images/projects/space-tourism.png'/>
           <div class="project-inner">
             <div class="project-info">
@@ -22,7 +32,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-up" 
+        v-if="this.all || this.shopify"
         class="project project-two"
       >
         <a
@@ -42,7 +52,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-left" 
+        v-if="all || vanilla"
         class="project project-two"
       >
         <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
@@ -60,7 +70,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-right" 
+        v-if="all || other"
         class="project project-two"
       >
         <a href="https://miserable-media.netlify.app/" target="_blank">
@@ -77,7 +87,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-down" 
+        v-if="all || other"
         class="project project-two"
       >
         <a href="https://themimosasnailbar.com" target="_blank">
@@ -96,7 +106,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-left" 
+        v-if="all || vue"
         class="project project-two"
       >
         <a href="https://vue-movie-list.netlify.app/" target="_blank">
@@ -113,7 +123,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-right" 
+        v-if="all || squarespace"
         class="project project-two"
       >
         <a href="https://yogafuzn.com" target="_blank">
@@ -130,7 +140,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-up" 
+        v-if="all || vue"
         class="project project-two"
       >
         <a href="https://travisfrazier.github.io/vue-drum-pad/" target="_blank">
@@ -148,7 +158,7 @@
         </a>
       </div>
       <div 
-        data-aos="fade-left" 
+        v-if="all || vanilla"
         class="project project-two"
       >
         <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
@@ -165,18 +175,149 @@
           </div>
         </a>
       </div>
+      <div 
+        v-if="all || vue"
+        class="project project-two"
+      >
+        <a href="https://data-intake-vue.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/data-intake.jpg' />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Data Intake Wizard</h3>
+              <p>
+                Designed and Developed a single page app for collecting data. Built with:
+                Vue and Vue Formulate. The image upload creates a Base64 string.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div 
+        v-if="all || react"
+        class="project project-two"
+      >
+        <a href="https://reactlistapp.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/list.png' />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>React List App</h3>
+              <p>
+                Simple and clean app built with React using the Gatsby SSG.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div 
+        v-if="all || squarespace"
+        class="project project-two"
+      >
+        <a href="https://flounder-kumquat-w36z.squarespace.com/" target="_blank">
+          <img src='../assets/images/projects/jeremy.png' />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Jeremy Caruthers</h3>
+              <p>
+                Squarespace portfolio site.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
     export default {
-      name: 'Project'
+      name: 'Project',
+      data() {
+        return {
+          vanilla: false,
+          vue: false,
+          react: false,
+          shopify: false,
+          squarespace: false,
+          other: false,
+          all: true
+        }
+      },
+      methods: {
+        showVanilla() {
+          this.vanilla = true;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showVue() {
+          this.vanilla = false;
+          this.vue = true;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showReact() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = true;
+          this.shopify = false;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showShopify() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = true;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showSquarespace() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = true;
+          this.all = false;
+        },
+        showOther() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.other = true;
+          this.all = false;
+        },
+        showAll() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.other = false;
+          this.all = true;
+        }
+      }
         
     }
 </script>
 
 <style lang="scss" scoped>
+.project-toggles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
 .projects {
   background-color: #212121;
   padding-bottom: 3rem;
