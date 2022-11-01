@@ -13,7 +13,7 @@
           </p>
           <p>
             I am passionate about creating user interfaces for web and mobile.
-            I worked with a variety of companies both big and small. I love helping 
+            I've worked with a variety of companies both big and small. I love helping 
             my clients and team achieve their web goals by creating a well built online presense.
           </p>
           <p>
