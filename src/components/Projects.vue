@@ -175,6 +175,58 @@
           </div>
         </a>
       </div>
+      <div 
+        v-if="all || vue"
+        class="project project-two"
+      >
+        <a href="https://data-intake-vue.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/data-intake.jpg' />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Data Intake Wizard</h3>
+              <p>
+                Designed and Developed a single page app for collecting data. Built with:
+                Vue and Vue Formulate. The image upload creates a Base64 string.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div 
+        v-if="all || react"
+        class="project project-two"
+      >
+        <a href="https://reactlistapp.netlify.app/" target="_blank">
+          <img src='../assets/images/projects/list.png' />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>React List App</h3>
+              <p>
+                Simple and clean app built with React using the Gatsby SSG.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div 
+        v-if="all || squarespace"
+        class="project project-two"
+      >
+        <a href="https://flounder-kumquat-w36z.squarespace.com/" target="_blank">
+          <img src='../assets/images/projects/jeremy.png' />
+          <div class="project-inner">
+            <div class="project-info">
+              <h3>Jeremy Caruthers</h3>
+              <p>
+                Squarespace portfolio site.
+              </p>
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -263,6 +315,8 @@
   justify-content: center;
   gap: 30px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+  padding: 0 15px;
 }
 .projects {
   background-color: #212121;
