@@ -17,7 +17,6 @@ h4 {
 
 .section-heading {
   display: flex;
-  width: 90%;
   margin: 0 auto;
 }
 
@@ -32,6 +31,9 @@ h2 {
   text-align: left;
   padding-top: 4rem;
   margin-bottom: 2rem;
+  @media only screen and (max-width: 768px) {
+    font-size: 4rem;
+  }
 }
 
 p {
@@ -68,4 +70,11 @@ button {
 		outline-offset: 15px;
 		text-shadow: 1px 1px 2px #427388;
 	}
+}
+
+.section-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
