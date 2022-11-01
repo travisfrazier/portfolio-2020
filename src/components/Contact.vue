@@ -72,11 +72,9 @@ export default {
   width: 90%;
   color: #ffffffb9;
 }
-
 #contact {
   background: #424242;
 }
-
 .form-wrapper {
   //width: 55%;
   //max-width: 42rem;
@@ -126,16 +124,7 @@ form {
     display: flex;
     margin: auto;
     width: 90%;
-  }
-  button {
-    width: 11rem;
-    height: 3.25rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff3f80;
-    color: white;
-    font-size: 1.25rem;
-    margin-top: 1rem;
+    padding: 40px 0px;
   }
 }
 </style>
