@@ -371,8 +371,6 @@ a {
 .projects_container {
   overflow: scroll;
   display: grid;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   @media only screen and (max-width: 1100px) {
