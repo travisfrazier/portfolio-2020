@@ -4,15 +4,17 @@
       <h2>My Latest Projects</h2>
     </div>
     <div class="project-toggles">
-      <button @click="showVanilla">Vanilla JS</button>
-      <button @click="showVue">Vue.js</button>
-      <button @click="showReact">React.js</button>
-      <button @click="showShopify">Shopify</button>
-      <button @click="showSquareSpace">SquareSpace</button>
-      <button @click="showAll">All</button>
+      <button @click="showVanilla()">Vanilla JS</button>
+      <button @click="showVue()">Vue.js</button>
+      <button @click="showReact()">React.js</button>
+      <button @click="showShopify()">Shopify</button>
+      <button @click="showSquarespace()">SquareSpace</button>
+      <button @click="showOther()">Other</button>
+      <button @click="showAll()">All</button>
     </div>
     <div class="projects_container">
       <div 
+        v-if="all || vue"
         data-aos="fade-right" 
         class="project project-two"
       >
@@ -30,6 +32,7 @@
         </a>
       </div>
       <div 
+        v-if="this.all || this.shopify"
         class="project project-two"
       >
         <a
@@ -49,6 +52,7 @@
         </a>
       </div>
       <div 
+        v-if="all || vanilla"
         class="project project-two"
       >
         <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
@@ -66,6 +70,7 @@
         </a>
       </div>
       <div 
+        v-if="all || other"
         class="project project-two"
       >
         <a href="https://miserable-media.netlify.app/" target="_blank">
@@ -82,6 +87,7 @@
         </a>
       </div>
       <div 
+        v-if="all || other"
         class="project project-two"
       >
         <a href="https://themimosasnailbar.com" target="_blank">
@@ -100,6 +106,7 @@
         </a>
       </div>
       <div 
+        v-if="all || vue"
         class="project project-two"
       >
         <a href="https://vue-movie-list.netlify.app/" target="_blank">
@@ -116,6 +123,7 @@
         </a>
       </div>
       <div 
+        v-if="all || squarespace"
         class="project project-two"
       >
         <a href="https://yogafuzn.com" target="_blank">
@@ -132,6 +140,7 @@
         </a>
       </div>
       <div 
+        v-if="all || vue"
         class="project project-two"
       >
         <a href="https://travisfrazier.github.io/vue-drum-pad/" target="_blank">
@@ -149,6 +158,7 @@
         </a>
       </div>
       <div 
+        v-if="all || vanilla"
         class="project project-two"
       >
         <a href="https://codepen.io/travisfrazier/full/bKyzep/" target="_blank">
@@ -174,12 +184,73 @@
       name: 'Project',
       data() {
         return {
-          showVanilla: false,
-          showVue: false,
-          showReact: false,
-          showShopify: false,
-          showSquare: false,
-          showAll: true
+          vanilla: false,
+          vue: false,
+          react: false,
+          shopify: false,
+          squarespace: false,
+          other: false,
+          all: true
+        }
+      },
+      methods: {
+        showVanilla() {
+          this.vanilla = true;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showVue() {
+          this.vanilla = false;
+          this.vue = true;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showReact() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = true;
+          this.shopify = false;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showShopify() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = true;
+          this.squarespace = false;
+          this.all = false;
+        },
+        showSquarespace() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = true;
+          this.all = false;
+        },
+        showOther() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.other = true;
+          this.all = false;
+        },
+        showAll() {
+          this.vanilla = false;
+          this.vue = false;
+          this.react = false;
+          this.shopify = false;
+          this.squarespace = false;
+          this.other = false;
+          this.all = true;
         }
       }
         
