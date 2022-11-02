@@ -19,7 +19,7 @@
           data-aos="fade-right"
           class="project project-two"
         >
-          <a href="https://space-tourism-vuejs.netlify.app//" target="_blank">
+          <a href="https://space-tourism-vuejs.netlify.app" target="_blank">
             <img src="../assets/images/projects/space-tourism.png" />
             <div class="project-inner">
               <div class="project-info">
