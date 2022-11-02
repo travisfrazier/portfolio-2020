@@ -42,12 +42,18 @@ export default {
     border-radius: 50%;
     border: 1px solid $color-links;
     margin: 0 0.5rem;
+    &:hover {
+      border-color: #fff;
+    }
   }
   i {
     display: table-cell;
     vertical-align: middle;
     color: $color-links;
     text-shadow: 2px 2px 10px $color-black;
+    &:hover {
+      color: #fff;
+    }
   }
 }
 </style>
