@@ -5,13 +5,13 @@
         <h2>My Latest Projects</h2>
       </div>
       <div class="project-toggles">
-        <button @click="showVanilla()">Vanilla JS</button>
-        <button @click="showVue()">Vue.js</button>
-        <button @click="showReact()">React.js</button>
-        <button @click="showShopify()">Shopify</button>
-        <button @click="showSquarespace()">SquareSpace</button>
-        <button @click="showOther()">Other</button>
-        <button @click="showAll()">All</button>
+        <button @click="toggleProject">Vanilla JS</button>
+        <button @click="toggleProject">Vue.js</button>
+        <button @click="toggleProject">React.js</button>
+        <button @click="toggleProject">Shopify</button>
+        <button @click="toggleProject">SquareSpace</button>
+        <button @click="toggleProject">Other</button>
+        <button @click="toggleProject">All</button>
       </div>
       <div class="projects_container">
         <div
@@ -213,72 +213,64 @@ export default {
     };
   },
   methods: {
-    showVanilla() {
-      this.vanilla = true;
-      this.vue = false;
-      this.react = false;
-      this.shopify = false;
-      this.squarespace = false;
-      this.other = false;
-
-      this.all = false;
-    },
-    showVue() {
-      this.vanilla = false;
-      this.vue = true;
-      this.react = false;
-      this.shopify = false;
-      this.squarespace = false;
-      this.other = false;
-
-      this.all = false;
-    },
-    showReact() {
-      this.vanilla = false;
-      this.vue = false;
-      this.react = true;
-      this.shopify = false;
-      this.squarespace = false;
-      this.other = false;
-
-      this.all = false;
-    },
-    showShopify() {
-      this.vanilla = false;
-      this.vue = false;
-      this.react = false;
-      this.shopify = true;
-      this.squarespace = false;
-      this.other = false;
-
-      this.all = false;
-    },
-    showSquarespace() {
-      this.vanilla = false;
-      this.vue = false;
-      this.react = false;
-      this.shopify = false;
-      this.squarespace = true;
-      this.other = false;
-      this.all = false;
-    },
-    showOther() {
-      this.vanilla = false;
-      this.vue = false;
-      this.react = false;
-      this.shopify = false;
-      this.squarespace = false;
-      this.other = true;
-      this.all = false;
-    },
-    showAll() {
-      this.vanilla = false;
-      this.vue = false;
-      this.react = false;
-      this.shopify = false;
-      this.squarespace = false;
-      this.other = false;
-      this.all = true;
+    toggleProject(event) {
+      if (event.target.textContent === "Vanilla JS") {
+        this.vanilla = true;
+        this.vue = false;
+        this.react = false;
+        this.shopify = false;
+        this.squarespace = false;
+        this.other = false;
+        this.all = false;
+      } else if (event.target.textContent === "Vue.js") {
+        this.vanilla = false;
+        this.vue = true;
+        this.react = false;
+        this.shopify = false;
+        this.squarespace = false;
+        this.other = false;
+        this.all = false;
+      } else if (event.target.textContent === "React.js") {
+        this.vanilla = false;
+        this.vue = false;
+        this.react = true;
+        this.shopify = false;
+        this.squarespace = false;
+        this.other = false;
+        this.all = false;
+      } else if (event.target.textContent === "Shopify") {
+        this.vanilla = false;
+        this.vue = false;
+        this.react = false;
+        this.shopify = true;
+        this.squarespace = false;
+        this.other = false;
+        this.all = false;
+      } else if (event.target.textContent === "SquareSpace") {
+        this.vanilla = false;
+        this.vue = false;
+        this.react = false;
+        this.shopify = false;
+        this.squarespace = true;
+        this.other = false;
+        this.all = false;
+      } else if (event.target.textContent === "Other") {
+        this.vanilla = false;
+        this.vue = false;
+        this.react = false;
+        this.shopify = false;
+        this.squarespace = false;
+        this.other = true;
+        this.all = false;
+      } else if (event.target.textContent === "All") {
+        this.vanilla = false;
+        this.vue = false;
+        this.react = false;
+        this.shopify = false;
+        this.squarespace = false;
+        this.other = false;
+        this.all = true;
+      }
     },
   },
 };
