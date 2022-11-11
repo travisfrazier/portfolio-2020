@@ -7,7 +7,6 @@
       <div class="project-toggles">
         <button @click="toggleProject">Vanilla JS</button>
         <button @click="toggleProject">Vue.js</button>
-        <button @click="toggleProject">React.js</button>
         <button @click="toggleProject">Shopify</button>
         <button @click="toggleProject">SquareSpace</button>
         <button @click="toggleProject">Other</button>
@@ -164,14 +163,14 @@
             </div>
           </a>
         </div>
-        <div v-if="all || react" class="project project-two">
-          <a href="https://reactlistapp.netlify.app/" target="_blank">
-            <img src="../assets/images/projects/list.png" />
+        <div v-if="all || vue" class="project project-two">
+          <a href="https://vuejs-todo-application.netlify.app/" target="_blank">
+            <img src="../assets/images/projects/todo-vue.png" />
             <div class="project-inner">
               <div class="project-info">
-                <h3>React List App</h3>
+                <h3>Over Engineered Vue To Do App</h3>
                 <p>
-                  Simple and clean app built with React using the Gatsby SSG.
+                  Simple and clean app built with Vue.js. Includes a dark mode, drag and drop, and other fancy features.
                 </p>
                 <span>View Site</span>
               </div>
@@ -205,7 +204,6 @@ export default {
     return {
       vanilla: false,
       vue: false,
-      react: false,
       shopify: false,
       squarespace: false,
       other: false,
@@ -226,14 +224,6 @@ export default {
         this.vanilla = false;
         this.vue = true;
         this.react = false;
-        this.shopify = false;
-        this.squarespace = false;
-        this.other = false;
-        this.all = false;
-      } else if (event.target.textContent === "React.js") {
-        this.vanilla = false;
-        this.vue = false;
-        this.react = true;
         this.shopify = false;
         this.squarespace = false;
         this.other = false;

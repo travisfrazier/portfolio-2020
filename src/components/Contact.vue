@@ -126,9 +126,4 @@ form {
     justify-content: center;
 	}
 }
-
-.section-container {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 </style>
