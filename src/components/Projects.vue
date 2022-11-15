@@ -3,12 +3,17 @@
     <div class="section-container">
       <div class="section-heading section-container">
         <h2>My Latest Projects</h2>
+        <p>
+          The projects below are to demonstarate my competancy in HTML,
+          CSS/SASS, Vanilla JavaScript, and the front-end framework Vue.js. I've
+          worked on many large builds and websites but most companies have rules
+          against displaying projects so I want to be respectful. For more
+          examples or links please reach out to me directly.
+        </p>
       </div>
       <div class="project-toggles">
         <button @click="toggleProject">Vanilla JS</button>
         <button @click="toggleProject">Vue.js</button>
-        <button @click="toggleProject">Shopify</button>
-        <button @click="toggleProject">SquareSpace</button>
         <button @click="toggleProject">Other</button>
         <button @click="toggleProject">All</button>
       </div>
@@ -32,18 +37,6 @@
             </div>
           </a>
         </div>
-        <div v-if="this.all || this.shopify" class="project project-two">
-          <a href="https://yogiroll.com" target="_blank">
-            <img src="../assets/images/projects/yogiroll.png" />
-            <div class="project-inner">
-              <div class="project-info">
-                <h3>YogiRoll Shopify Site</h3>
-                <p>Created an ecommerce site for YogiRoll. Shopify platform.</p>
-                <span>View Site</span>
-              </div>
-            </div>
-          </a>
-        </div>
         <div v-if="all || vanilla" class="project project-two">
           <a href="https://travisfrazier.github.io/matchgame/" target="_blank">
             <img src="../assets/images/projects/guess.png" />
@@ -53,6 +46,21 @@
                 <p>
                   Developed this match game application. Built with: Vanilla
                   JavaScript, Bootstrap 4, and custom CSS.
+                </p>
+                <span>View Site</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div v-if="all || vue" class="project project-two">
+          <a href="https://vuejs-todo-application.netlify.app/" target="_blank">
+            <img src="../assets/images/projects/todo-vue.png" />
+            <div class="project-inner">
+              <div class="project-info">
+                <h3>Over Engineered Vue To Do App</h3>
+                <p>
+                  Simple and clean app built with Vue.js. Includes a dark mode,
+                  drag and drop, and more. Built based on Figma design.
                 </p>
                 <span>View Site</span>
               </div>
@@ -94,18 +102,6 @@
               <div class="project-info">
                 <h3>Nuxt (Vue) Movie List</h3>
                 <p>Single page demo app built with Vue / NuxtJS.</p>
-                <span>View Site</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div v-if="all || squarespace" class="project project-two">
-          <a href="https://yogafuzn.com" target="_blank">
-            <img src="../assets/images/projects/yogafuzn.jpg" />
-            <div class="project-inner">
-              <div class="project-info">
-                <h3>YogaFuzn Studio</h3>
-                <p>Designed and built yogafuzn.com - SquareSpace platform.</p>
                 <span>View Site</span>
               </div>
             </div>
@@ -156,37 +152,8 @@
                 <p>
                   Designed and Developed a single page app for collecting data.
                   Built with: Vue and Vue Formulate. The image upload creates a
-                  Base64 string.
+                  Base64 string and then submits all the data to a server via Axios.
                 </p>
-                <span>View Site</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div v-if="all || vue" class="project project-two">
-          <a href="https://vuejs-todo-application.netlify.app/" target="_blank">
-            <img src="../assets/images/projects/todo-vue.png" />
-            <div class="project-inner">
-              <div class="project-info">
-                <h3>Over Engineered Vue To Do App</h3>
-                <p>
-                  Simple and clean app built with Vue.js. Includes a dark mode, drag and drop, and other fancy features.
-                </p>
-                <span>View Site</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div v-if="all || squarespace" class="project project-two">
-          <a
-            href="https://flounder-kumquat-w36z.squarespace.com/"
-            target="_blank"
-          >
-            <img src="../assets/images/projects/jeremy.png" />
-            <div class="project-inner">
-              <div class="project-info">
-                <h3>Jeremy Caruthers</h3>
-                <p>Squarespace portfolio site.</p>
                 <span>View Site</span>
               </div>
             </div>
@@ -215,49 +182,21 @@ export default {
       if (event.target.textContent === "Vanilla JS") {
         this.vanilla = true;
         this.vue = false;
-        this.react = false;
-        this.shopify = false;
-        this.squarespace = false;
         this.other = false;
         this.all = false;
       } else if (event.target.textContent === "Vue.js") {
         this.vanilla = false;
         this.vue = true;
-        this.react = false;
-        this.shopify = false;
-        this.squarespace = false;
-        this.other = false;
-        this.all = false;
-      } else if (event.target.textContent === "Shopify") {
-        this.vanilla = false;
-        this.vue = false;
-        this.react = false;
-        this.shopify = true;
-        this.squarespace = false;
-        this.other = false;
-        this.all = false;
-      } else if (event.target.textContent === "SquareSpace") {
-        this.vanilla = false;
-        this.vue = false;
-        this.react = false;
-        this.shopify = false;
-        this.squarespace = true;
         this.other = false;
         this.all = false;
       } else if (event.target.textContent === "Other") {
         this.vanilla = false;
         this.vue = false;
-        this.react = false;
-        this.shopify = false;
-        this.squarespace = false;
         this.other = true;
         this.all = false;
       } else if (event.target.textContent === "All") {
         this.vanilla = false;
         this.vue = false;
-        this.react = false;
-        this.shopify = false;
-        this.squarespace = false;
         this.other = false;
         this.all = true;
       }
@@ -359,5 +298,21 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   }
   grid-gap: 1rem;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7333333333);
+  text-align: center;
+  align-items: center;
+  p {
+    max-width: 80%;
+  }
+}
+
+h2 {
+  margin-bottom: 0rem;
 }
 </style>
